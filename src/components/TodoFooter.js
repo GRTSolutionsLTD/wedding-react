@@ -3,7 +3,7 @@ import FilterLink from '../containers/FilterLink'
 
 const TodoFooter = () =>
   <p>
-    Show: <FilterLink filter="SHOW_ALL">All Test</FilterLink>
+    Show: <FilterLink filter="SHOW_ALL">All</FilterLink>
     {', '}
     <FilterLink filter="SHOW_ACTIVE">Active</FilterLink>
     {', '}
