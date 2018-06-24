@@ -1,6 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router'
 
+
+import React from 'react'
+import { Link } from 'react-router'
+
 const Navigation = ({ className, buttonClassName }) =>
   <nav className={className}>
     <Link className={buttonClassName} to="/">
@@ -10,8 +14,11 @@ const Navigation = ({ className, buttonClassName }) =>
     <Link className={buttonClassName} to="todo">
       Todo
     </Link>
-    <Link className={buttonClassName} to="details">
+    <Link className={buttonClassName} to="matcher">
     details
+    </Link>
+    <Link className={buttonClassName} to="details">
+      Weather
     </Link>
   </nav>
 
