@@ -1,4 +1,4 @@
-import weatherApi from '../services/weatherApi'
+import detailsApi from '../services/detailsApi'
 
 export const showWeather = response => ({
   type: 'WEATHER_SHOW_WEATHER',
@@ -17,7 +17,7 @@ export const getWeather = () => async dispatch => {
     env: 'store://datatables.org/alltableswithkeys'
   }
   try {
-    const response = await weatherApi.getWeather(request)
+    const response = await detailsApi.getWeather(request)
     dispatch(showWeather(response))
   } catch(e) {
     console.error(e)

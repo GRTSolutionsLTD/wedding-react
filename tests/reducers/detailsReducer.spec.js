@@ -1,7 +1,7 @@
 import expect from 'expect'
-import reducer from '../../src/reducers/weatherReducer'
+import reducer from '../../src/reducers/detailsReducer'
 
-describe('weather reducer:', () => {
+describe('details reducer:', () => {
   const initialState = {
     loading: false,
     city: 'Initial',
@@ -21,12 +21,12 @@ describe('weather reducer:', () => {
     })
     expect(
       reducer(initialState, {
-        type: 'WEATHER_SHOW_LOADING'
+        type: 'Details_SHOW_LOADING'
       })
     ).toEqual(expectedInitState)
   })
 
-  it('show weather', () => {
+  it('show details', () => {
     const expectedInitState = Object.assign(initialState, {
       loading: false,
       city: 'Taipei City',
@@ -56,7 +56,7 @@ describe('weather reducer:', () => {
 
     expect(
       reducer(initialState, {
-        type: 'WEATHER_SHOW_WEATHER',
+        type: 'Details_SHOW_Details',
         response: apiResponse
       })
     ).toEqual(expectedInitState)

@@ -6,14 +6,14 @@ const initialState = {
   text: 'Initial'
 }
 
-const weatherReducer = (state = initialState, action) => {
+const DetailsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'WEATHER_SHOW_LOADING':
+    case 'Details_SHOW_LOADING':
       return Object.assign({}, state, {
         loading: true
       })
 
-    case 'WEATHER_SHOW_WEATHER':
+    case 'Details_SHOW_Details':
       const location = action.response.query.results.channel.location
       const condition = action.response.query.results.channel.item.condition
       return Object.assign({}, state, {
@@ -29,4 +29,4 @@ const weatherReducer = (state = initialState, action) => {
   }
 }
 
-export default weatherReducer
+export default DetailsReducer

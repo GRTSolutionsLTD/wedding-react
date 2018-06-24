@@ -10,8 +10,8 @@ const Navigation = ({ className, buttonClassName }) =>
     <Link className={buttonClassName} to="todo">
       Todo
     </Link>
-    <Link className={buttonClassName} to="weather">
-      Weather
+    <Link className={buttonClassName} to="details">
+    details
     </Link>
   </nav>
 
