@@ -6,10 +6,12 @@
         "base/typography";
 
 @import "pages/Register",
-        "pages/todo";
+        "pages/todo",
+        "pages/home",
+        "pages/matcher";
 
 @import "components/header",
         "components/button",
         "components/todo",
-        "components/weather",
+        "components/details",
         "components/demo";

@@ -9,7 +9,9 @@ import { configureStore } from './store'
 import registerServiceWorker from './registerServiceWorker'
 import routes from './routes'
 import './styles/main.css'
+import './styles/main.scss'
 
+import { DropdownList } from 'react-widgets'
 const state = window.__initialState__ || undefined
 const store = configureStore(hashHistory, state)
 const history = syncHistoryWithStore(hashHistory, store)

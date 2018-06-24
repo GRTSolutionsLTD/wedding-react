@@ -4,13 +4,13 @@ const headers = {
 }
 const options = {}
 const book = {
-  getWeather: {
+  getDetails: {
     url: '/v1/public/{{search_type}}',
     method: 'GET',
     payload: {
       query: {
         q:
-          'select * from weather.forecast where woeid in (select woeid from geo.places(1) where text="{{city}}, ak")',
+          'select * from details.forecast where woeid in (select woeid from geo.places(1) where text="{{city}}, ak")',
         format: 'json',
         env: '{{env}}'
       }

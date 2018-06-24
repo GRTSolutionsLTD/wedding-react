@@ -68,7 +68,7 @@ create-react-redux-app/
   src/
     actions/
       todoActions.js
-      weatherActions.js
+    DetailsActions.js
     components/
       App.js
       Header.js
@@ -83,19 +83,19 @@ create-react-redux-app/
       AddTodo.js
       FilterLink.js
       VisibleTodoList.js
-      Weather.js
+    Details.js
     images/
       logo.svg
     pages/
       Register.js
       Todo.js
-      Weather.js
+    Details.js
     reducers/
       todos.js
       visibilityFilter.js
-      weatherReducer.js
+    DetailsReducer.js
     services/
-      weatherApi.js
+    DetailsApi.js
     styles/
       base/
       components/
@@ -114,7 +114,7 @@ create-react-redux-app/
     components/
       App.spec.js
     reducers/
-      weatherReducer.spec.js
+    DetailsReducer.spec.js
   --
   public/
     favicon.ico
