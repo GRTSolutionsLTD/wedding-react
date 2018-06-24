@@ -4,7 +4,7 @@ import App from './components/App'
 import Home from './pages/Home'
 import Todo from './pages/Todo'
 import Details from './pages/Details'
-
+import Matcher from './pages/Matcher'
 
 
 const routes = (
