@@ -143,10 +143,10 @@ render(){
           Click Me!
         </button>
 
-        <Popup show={this.state.isOpen}
+         <Popup show={this.state.isOpen}
           onClose={this.closePopup}>
           <SubscriptionForm></SubscriptionForm>
-        </Popup>
+        </Popup> 
         </div>
     </div>
       )
