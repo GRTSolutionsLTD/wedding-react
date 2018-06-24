@@ -97,25 +97,11 @@ class Details extends React.Component{
             placeholder="search"
             onChange={event=>this.searchByStatus({search:event.target.value})}/>
       <button value="sortByDate" onClick={this.sortByDate}>sort by bornDate</button>
+      {/* <Moment interval={0}>
+                1976-04-19T12:59-0500
+            </Moment> */}
   </div>
-   //<Moment>{dateToFormat}</Moment>
-
-  //    <table>
-  //      <tr>
-  //        <th>id</th>
-  //        <th>last name</th>
-  //        <th>status</th>
-  //        <th>date</th>
-  //      </tr>
-  //     {this.state.arr.map(p=><tr><td>{p.id}</td><td>{p.lastName}</td><td>{p.status}</td><td>{p.date}</td></tr>)}
-  //      <input
-  //           className="form-control"
-  //           type="text"
-  //           placeholder="search"
-  //           onChange={event=>this.searchByStatus({search:event.target.value})}/>
-  //     <button value="sortByDate" onClick={this.sortByDate}>sort by bornDate</button>
-  //   </table>
-  //
+     //{this.state.arr.map(p=><tr><td>{p.id}</td><td>{p.lastName}</td><td>{p.status}</td><td>{p.date}</td></tr>)}
  )
    }
 }
