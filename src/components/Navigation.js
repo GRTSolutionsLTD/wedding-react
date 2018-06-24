@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 const Navigation = ({ className, buttonClassName }) =>
   <nav className={className}>
     <Link className={buttonClassName} to="/">
-      Home
+      Register
     </Link>
     {/* reduser  בלינק מקשרים ל */}
     <Link className={buttonClassName} to="todo">
