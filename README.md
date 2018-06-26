@@ -87,7 +87,7 @@ create-react-redux-app/
     images/
       logo.svg
     pages/
-      Home.js
+      Register.js
       Todo.js
     Details.js
     reducers/
@@ -159,7 +159,7 @@ Reference: https://github.com/facebookincubator/create-react-app
 Changes package.json
 
 ```js
-"homepage": "http://{account_name}.github.io/{project_name}",
+"registerpage": "http://{account_name}.github.io/{project_name}",
 "scripts": {
   "predeploy": "npm run build"
 }

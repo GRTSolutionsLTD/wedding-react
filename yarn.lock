@@ -1018,7 +1018,7 @@ babel-register@^6.24.1:
     babel-core "^6.24.1"
     babel-runtime "^6.22.0"
     core-js "^2.4.0"
-    home-or-tmp "^2.0.0"
+    register-or-tmp "^2.0.0"
     lodash "^4.2.0"
     mkdirp "^0.5.1"
     source-map-support "^0.4.2"
@@ -1030,7 +1030,7 @@ babel-register@^6.26.0:
     babel-core "^6.26.0"
     babel-runtime "^6.26.0"
     core-js "^2.5.0"
-    home-or-tmp "^2.0.0"
+    register-or-tmp "^2.0.0"
     lodash "^4.17.4"
     mkdirp "^0.5.1"
     source-map-support "^0.4.15"
@@ -1737,7 +1737,7 @@ cosmiconfig@^2.1.0, cosmiconfig@^2.1.1:
     js-yaml "^3.4.3"
     minimist "^1.2.0"
     object-assign "^4.1.0"
-    os-homedir "^1.0.1"
+    os-registerdir "^1.0.1"
     parse-json "^2.2.0"
     require-from-string "^1.1.0"
 
@@ -2599,7 +2599,7 @@ expand-tilde@^2.0.0, expand-tilde@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/expand-tilde/-/expand-tilde-2.0.2.tgz#97e801aa052df02454de46b02bf621642cdc8502"
   dependencies:
-    homedir-polyfill "^1.0.1"
+    registerdir-polyfill "^1.0.1"
 
 expect@^22.4.3:
   version "22.4.3"
@@ -3056,7 +3056,7 @@ global-prefix@^1.0.1:
   resolved "https://registry.yarnpkg.com/global-prefix/-/global-prefix-1.0.2.tgz#dbf743c6c14992593c655568cb66ed32c0122ebe"
   dependencies:
     expand-tilde "^2.0.2"
-    homedir-polyfill "^1.0.1"
+    registerdir-polyfill "^1.0.1"
     ini "^1.3.4"
     is-windows "^1.0.1"
     which "^1.2.14"
@@ -3245,16 +3245,16 @@ hoist-non-react-statics@^2.3.1, hoist-non-react-statics@^2.5.0:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.5.0.tgz#d2ca2dfc19c5a91c5a6615ce8e564ef0347e2a40"
 
-home-or-tmp@^2.0.0:
+register-or-tmp@^2.0.0:
   version "2.0.0"
-  resolved "https://registry.yarnpkg.com/home-or-tmp/-/home-or-tmp-2.0.0.tgz#e36c3f2d2cae7d746a857e38d18d5f32a7882db8"
+  resolved "https://registry.yarnpkg.com/register-or-tmp/-/register-or-tmp-2.0.0.tgz#e36c3f2d2cae7d746a857e38d18d5f32a7882db8"
   dependencies:
-    os-homedir "^1.0.0"
+    os-registerdir "^1.0.0"
     os-tmpdir "^1.0.1"
 
-homedir-polyfill@^1.0.1:
+registerdir-polyfill@^1.0.1:
   version "1.0.1"
-  resolved "https://registry.yarnpkg.com/homedir-polyfill/-/homedir-polyfill-1.0.1.tgz#4c2bbc8a758998feebf5ed68580f76d46768b4bc"
+  resolved "https://registry.yarnpkg.com/registerdir-polyfill/-/registerdir-polyfill-1.0.1.tgz#4c2bbc8a758998feebf5ed68580f76d46768b4bc"
   dependencies:
     parse-passwd "^1.0.0"
 
@@ -4907,9 +4907,9 @@ os-browserify@^0.2.0:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/os-browserify/-/os-browserify-0.2.1.tgz#63fc4ccee5d2d7763d26bbf8601078e6c2e0044f"
 
-os-homedir@^1.0.0, os-homedir@^1.0.1:
+os-registerdir@^1.0.0, os-registerdir@^1.0.1:
   version "1.0.2"
-  resolved "https://registry.yarnpkg.com/os-homedir/-/os-homedir-1.0.2.tgz#ffbc4988336e0e833de0c168c7ef152121aa7fb3"
+  resolved "https://registry.yarnpkg.com/os-registerdir/-/os-registerdir-1.0.2.tgz#ffbc4988336e0e833de0c168c7ef152121aa7fb3"
 
 os-locale@^1.4.0:
   version "1.4.0"
@@ -4933,7 +4933,7 @@ osenv@0, osenv@^0.1.0, osenv@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/osenv/-/osenv-0.1.4.tgz#42fe6d5953df06c8064be6f176c3d05aaaa34644"
   dependencies:
-    os-homedir "^1.0.0"
+    os-registerdir "^1.0.0"
     os-tmpdir "^1.0.0"
 
 p-finally@^1.0.0:
@@ -7169,7 +7169,7 @@ xdg-basedir@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/xdg-basedir/-/xdg-basedir-2.0.0.tgz#edbc903cc385fc04523d966a335504b5504d1bd2"
   dependencies:
-    os-homedir "^1.0.0"
+    os-registerdir "^1.0.0"
 
 xml-char-classes@^1.0.0:
   version "1.0.0"
