@@ -6,36 +6,38 @@ import moment from 'moment';
 import 'react-datepicker/dist/react-datepicker.css';
 import Popup from './Popup';
 import SubscriptionForm from './SubscriptionForm';
+import { Link } from 'react-router'
+var _=require('lodash');
+
 
 const peopleArray = [
-  { id: 123, name: "dave", age: 23 },
-  { id: 456, name: "chris", age: 23 },
-  { id: 789, name: "bob", age: 23 },
-  { id: 101, name: "tom", age: 23 },
-  { id: 102, name: "tim", age: 23 }
+  { id:"123",  lastNamename: "dave", firtName:"déjà vu",email:"tzippy6160@gmail.com",password:"100", age:"23"},
+  { id:"456",  lastNamename: "chris",firtName:"déjeuner à la fourchette",email:"tzippy6160@gmail.com",password:"100", age:"23"},
+  { id:"789",  lastNamename: "bob",  firtName:"déjeuner",email:"tzippy6160@gmail.com",password:"100", age:"23"},
+  { id:"101",  lastNamename: "tom",  firtName:"dégagé",email:"tzippy6160@gmail.com",password:"100", age:"23"},
+  { id:"102",  lastNamename: "tim",  firtName:"décor",email:"tzippy6160@gmail.com",password:"100", age:"23"}
 ]
 const options = [
   'female', 'male'
 ]
-
 class SignUp extends Component{
-
  constructor(props, context){
    super(props, context);
-   this.state={
-     email:'',
-     password:'',
-     id:'',
-     firtName:'',
-     lastName:'',
-     age:'',
-     selectedOption: '',
-     startDate: moment(),
-     isOpen: false
-   };  
+    this.state={
+      id:'',
+      firtName:'',
+      lastName:'',
+      email:'',
+      password:'',
+      age:'',
+      selectedOption: '',
+      startDate: moment(),
+      isOpen: false
+    };  
    this.handleChange = this.handleChange.bind(this);
    this.handleChangeDate = this.handleChangeDate.bind(this);
  }
+
  handleChange = (selectedOption) => {
   this.setState({ selectedOption });
   if (selectedOption) {
@@ -49,10 +51,15 @@ class SignUp extends Component{
 }
 signUp(){
   debugger
-  console.log('this.state',this.state);
-  console.log(peopleArray);
-  peopleArray.push(this.state);
-  console.log(peopleArray);
+  _.deburr("déjà vu");
+  if(!_.find(peopleArray, {id: this.state.id}))
+   {
+    console.log('this.state',this.state);
+    console.log(peopleArray);
+    peopleArray.push(this.state);
+    console.log(peopleArray);
+    this.openPopup();
+  }
 }
 
 openPopup = () => {
@@ -60,7 +67,6 @@ openPopup = () => {
     isOpen: true
   });
 }
-
 closePopup = () => {
   this.setState({
     isOpen: false
@@ -128,21 +134,15 @@ render(){
           >
               Sign Up
           </button>
-          <button
+          {/* <button
             className="btn btn-primary"
             type="button"
-            onClick={()=>this.signUp()}
           >
              Cancel
-          </button>
-
-
-
-
-          <button onClick={this.openPopup}>
-          Click Me!
-        </button>
-
+          </button> */}
+          <Link to="matcher">
+          Cancel-matcher
+         </Link>
          <Popup show={this.state.isOpen}
           onClose={this.closePopup}>
           <SubscriptionForm></SubscriptionForm>
