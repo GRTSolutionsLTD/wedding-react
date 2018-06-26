@@ -35,7 +35,6 @@ class SignUp extends Component{
    };  
    this.handleChange = this.handleChange.bind(this);
    this.handleChangeDate = this.handleChangeDate.bind(this);
- }
  handleChange = (selectedOption) => {
   this.setState({ selectedOption });
   if (selectedOption) {
@@ -149,7 +148,7 @@ render(){
         </Popup> 
         </div>
     </div>
-      )
+      );
    }
  }
 export default SignUp;

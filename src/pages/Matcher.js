@@ -1,14 +1,9 @@
 
 import React from 'react'
 import { Helmet } from 'react-helmet'
-// import DropdownList from 'react-widgets/lib/DropdownList'
-// import Dropdown from 'react-dropdown'
 import { Link } from 'react-router'
-//  import { BrowserRouter } from 'react-router-dom'
 import axios, { AxiosResponse, AxiosInstance } from 'axios';
 import _ from 'lodash'
-import update from 'react-update'
-// import { DropDownList, ComboBox, AutoComplete } from '@progress/kendo-react-dropdowns';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 
