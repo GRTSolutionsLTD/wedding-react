@@ -2,7 +2,7 @@ import React,{ Component } from 'react';
 import Dropdown from 'react-dropdown';
 import DatePicker from 'react-datepicker';
 import moment from 'moment';
-
+import { connect } from 'react-redux';
 import 'react-datepicker/dist/react-datepicker.css';
 import Popup from './Popup';
 import SubscriptionForm from './SubscriptionForm';
@@ -10,16 +10,6 @@ import { Link } from 'react-router'
 var _=require('lodash');
 
 
-const peopleArray = [
-  { id:"123",  lastNamename: "dave", firtName:"déjà vu",email:"tzippy6160@gmail.com",password:"100", age:"23"},
-  { id:"456",  lastNamename: "chris",firtName:"déjeuner à la fourchette",email:"tzippy6160@gmail.com",password:"100", age:"23"},
-  { id:"789",  lastNamename: "bob",  firtName:"déjeuner",email:"tzippy6160@gmail.com",password:"100", age:"23"},
-  { id:"101",  lastNamename: "tom",  firtName:"dégagé",email:"tzippy6160@gmail.com",password:"100", age:"23"},
-  { id:"102",  lastNamename: "tim",  firtName:"décor",email:"tzippy6160@gmail.com",password:"100", age:"23"}
-]
-const options = [
-  'female', 'male'
-]
 class SignUp extends Component{
  constructor(props, context){
    super(props, context);
@@ -32,11 +22,40 @@ class SignUp extends Component{
       age:'',
       selectedOption: '',
       startDate: moment(),
-      isOpen: false
+      isOpen: false,
+      date: new Date(),
+      peopleArray:[
+        { id:"123",  lastNamename: "dave", firstName:"déjà vu",email:"tzippy6160@gmail.com",password:"100", age:"23"},
+        { id:"456",  lastNamename: "chris",firstName:"déjeuner à la fourchette",email:"tzippy6160@gmail.com",password:"100", age:"23"},
+        { id:"789",  lastNamename: "bob",  firstName:"déjeuner",email:"tzippy6160@gmail.com",password:"100", age:"23"},
+        { id:"101",  lastNamename: "tom",  firstName:"dégagé",email:"tzippy6160@gmail.com",password:"100", age:"23"},
+        { id:"102",  lastNamename: "tim",  firstName:"décor",email:"tzippy6160@gmail.com",password:"100", age:"23"}
+      ],
+      options : [
+        'female', 'male'
+      ]
     };  
    this.handleChange = this.handleChange.bind(this);
    this.handleChangeDate = this.handleChangeDate.bind(this);
  }
+
+ componentDidMount() {
+  this.timerID = setInterval(
+    () => this.tick(),
+    1000
+  );
+}
+
+componentWillUnmount() {
+  clearInterval(this.timerID);
+}
+
+tick() {
+  console.log("tick 3");
+  this.setState({
+    date: new Date()
+  });
+}
 
  handleChange = (selectedOption) => {
   this.setState({ selectedOption });
@@ -49,17 +68,29 @@ class SignUp extends Component{
       startDate: date
   });
 }
+
 signUp(){
   debugger
-  _.deburr("déjà vu");
-  if(!_.find(peopleArray, {id: this.state.id}))
+  console.log("in signUp")
+//const newpeopleArray=[...this.state.peopleArray];
+const newpeopleArray=_.forEach(this.state.peopleArray, (e) => {
+  debugger
+console.log(_.deburr(e.firstName));
+console.log(_.deburr(e.firstName,{firstName:this.state.firstName}));
+_.deburr(e.firstName,{firstName:this.state.firstName});
+});
+  
+  console.log("newpeopleArray",newpeopleArray);
+  console.log("peopleArray",this.state.peopleArray);
+  
+  if(!_.find(this.state.peopleArray, {id: this.state.id}))
    {
     console.log('this.state',this.state);
-    console.log(peopleArray);
-    peopleArray.push(this.state);
-    console.log(peopleArray);
+    console.log(this.state.peopleArray);
+    this.state.peopleArray.push(this.state);
+    console.log(this.state.peopleArray);
     this.openPopup();
-  }
+ }
 }
 
 openPopup = () => {
@@ -78,6 +109,7 @@ render(){
   return (
     <div className="form-inline" style={{margin:'5%'}}>
       <h2>Sign Up</h2>
+      <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
         <div className="form-group">
         <DatePicker
             selected={this.state.startDate}
@@ -109,7 +141,7 @@ render(){
           />
           <Dropdown 
           className="form-control" 
-          options={options}
+          options={this.state.options}
           placeholder="Select an option"
           value={selectedOption} 
           onChange={this.handleChange}
@@ -129,6 +161,7 @@ render(){
           />
           <button
             className="btn btn-primary"
+            className="c-button"
             type="button"
             onClick={()=>this.signUp()}
           >
@@ -140,7 +173,7 @@ render(){
           >
              Cancel
           </button> */}
-          <Link to="matcher">
+          <Link className="c-button" to="matcher">
           Cancel-matcher
          </Link>
          <Popup show={this.state.isOpen}
