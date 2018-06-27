@@ -3,9 +3,11 @@ import Dropdown from 'react-dropdown';
 import DatePicker from 'react-datepicker';
 import moment from 'moment';
 import { connect } from 'react-redux';
+import * as registerActions from '../actions/registerAction';
+import {savePerson} from '../actions/registerAction'
 import 'react-datepicker/dist/react-datepicker.css';
-import Popup from './Popup';
-import SubscriptionForm from './SubscriptionForm';
+import Popup from '../pages/Popup';
+import SubscriptionForm from '../pages/SubscriptionForm';
 import { Link } from 'react-router'
 var _=require('lodash');
 
@@ -24,6 +26,7 @@ class SignUp extends Component{
       startDate: moment(),
       isOpen: false,
       date: new Date(),
+      status:'0',
       peopleArray:[
         { id:"123",  lastNamename: "dave", firstName:"déjà vu",email:"tzippy6160@gmail.com",password:"100", age:"23"},
         { id:"456",  lastNamename: "chris",firstName:"déjeuner à la fourchette",email:"tzippy6160@gmail.com",password:"100", age:"23"},
@@ -167,12 +170,13 @@ render(){
           >
               Sign Up
           </button>
-          {/* <button
+          <button
+          onClick={this.props.savePerson}
             className="btn btn-primary"
             type="button"
           >
              Cancel
-          </button> */}
+          </button>
           <Link className="c-button" to="matcher">
           Cancel-matcher
          </Link>
@@ -185,13 +189,20 @@ render(){
       )
    }
  }
-export default SignUp;
-// export default connect(
-//   state => ({
-//     registerState: state.registerReducer
-//   }),
-//   dispatch => ({
-//     actions: bindActionCreators(registerActions, dispatch)
-//   })
-// )(SignUp)
+
+const mapStateToProps = (state) => {
+  debugger
+  return {
+  };
+}
+
+  const mapDispatchToProps = (dispatch)=>{
+  debugger
+  return{
+   savePerson:(state)=>dispatch(savePerson()) 
+  }; 
+  
+  }
+  
+  export default connect(mapStateToProps,mapDispatchToProps)(SignUp)
 
