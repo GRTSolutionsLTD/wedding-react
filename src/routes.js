@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, IndexRoute } from 'react-router'
 import App from './components/App'
-import Register from './pages/Register'
+import Register from './containers/Register'
 import Todo from './pages/Todo'
 import Details from './pages/Details'
 import Matcher from './containers/Matcher'

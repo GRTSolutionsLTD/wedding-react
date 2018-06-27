@@ -47,7 +47,7 @@ export class Matcher extends React.Component {
 
     componentWillMount() {
       console.log("componentWillMount");
-        axios.get('http://localhost:3000/data').then(res => {
+        axios.get('http://localhost:3004/data').then(res => {
             this.user = res.data;
             this.state.users = res.data;
             this.fillArray();
@@ -64,9 +64,9 @@ export class Matcher extends React.Component {
             users[this.state.indexFemale].status = 1;
             users[this.state.indexMale].status = 1;
             this.setState({ users })
-            axios.put(`http://localhost:3000/data/${users[this.state.indexFemale].id}`, users[this.state.indexFemale]).then(res => {         
+            axios.put(`http://localhost:3004/data/${users[this.state.indexFemale].id}`, users[this.state.indexFemale]).then(res => {         
             });
-            axios.put(`http://localhost:3000/data/${users[this.state.indexMale].id}`, users[this.state.indexMale]).then(res => {        
+            axios.put(`http://localhost:3004/data/${users[this.state.indexMale].id}`, users[this.state.indexMale]).then(res => {        
             });
             this.fillArray();
         }

@@ -1,13 +1,13 @@
 import React,{ Component } from 'react';
 import Dropdown from 'react-dropdown';
-//import DatePicker from 'react-datepicker';
+import DatePicker from 'react-datepicker';
 import moment from 'moment';
 import { connect } from 'react-redux';
+import * as registerActions from '../actions/registerAction';
+import {savePerson} from '../actions/registerAction'
 import 'react-datepicker/dist/react-datepicker.css';
-
-//import 'react-datepicker/dist/react-datepicker.css';
-import Popup from './Popup';
-import SubscriptionForm from './SubscriptionForm';
+import Popup from '../pages/Popup';
+import SubscriptionForm from '../pages/SubscriptionForm';
 import { Link } from 'react-router'
 var _=require('lodash');
 
@@ -26,6 +26,7 @@ class SignUp extends Component{
       startDate: moment(),
       isOpen: false,
       date: new Date(),
+      status:'0',
       peopleArray:[
         { id:"123",  lastNamename: "dave", firstName:"déjà vu",email:"tzippy6160@gmail.com",password:"100", age:"23"},
         { id:"456",  lastNamename: "chris",firstName:"déjeuner à la fourchette",email:"tzippy6160@gmail.com",password:"100", age:"23"},
@@ -93,37 +94,6 @@ _.deburr(e.firstName,{firstName:this.state.firstName});
     console.log(this.state.peopleArray);
     this.openPopup();
  }
-   this.state={
-     email:'',
-     password:'',
-     id:'',
-     firtName:'',
-     lastName:'',
-     age:'',
-     selectedOption: '',
-     startDate: moment(),
-     isOpen: false
-   };  
-  // this.handleChange = this.handleChange.bind(this);
-   this.handleChangeDate = this.handleChangeDate.bind(this);
- //handleChange = (selectedOption) => {
- // this.setState({ selectedOption });
- // if (selectedOption) {
- //   console.log(`Selected: ${selectedOption.label}`);
- // }
- //};
-}
-  handleChangeDate(date) {
-   this.setState({
-       startDate: date
-   });
-  }
- signUp(){
-  debugger;
-  console.log('this.state',this.state);
-  console.log(peopleArray);
-  peopleArray.push(this.state);
-  console.log(peopleArray);
 }
 
 openPopup = () => {
@@ -144,10 +114,10 @@ render(){
       <h2>Sign Up</h2>
       <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
         <div className="form-group">
-       {/* <!-- <DatePicker
+        <DatePicker
             selected={this.state.startDate}
             onChange={this.handleChangeDate}
-        />--> */}
+        />
           <input
             className="form-control"
             type="text"
@@ -200,12 +170,13 @@ render(){
           >
               Sign Up
           </button>
-          {/* <button
+          <button
+          onClick={this.props.savePerson}
             className="btn btn-primary"
             type="button"
           >
              Cancel
-          </button> */}
+          </button>
           <Link className="c-button" to="matcher">
           Cancel-matcher
          </Link>
@@ -215,17 +186,23 @@ render(){
         </Popup> 
         </div>
     </div>
-      );
+      )
    }
  }
 
-export default SignUp;
-// export default connect(
-//   state => ({
-//     registerState: state.registerReducer
-//   }),
-//   dispatch => ({
-//     actions: bindActionCreators(registerActions, dispatch)
-//   })
-// )(SignUp)
+const mapStateToProps = (state) => {
+  debugger
+  return {
+  };
+}
+
+  const mapDispatchToProps = (dispatch)=>{
+  debugger
+  return{
+   savePerson:(state)=>dispatch(savePerson()) 
+  }; 
+  
+  }
+  
+  export default connect(mapStateToProps,mapDispatchToProps)(SignUp)
 
