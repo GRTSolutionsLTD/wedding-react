@@ -156,7 +156,7 @@
       "lastName": "Alexandra",
       "age": 82,
       "sex": 0,
-      "status": 0,
+      "status": 1,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a178e55b85c5ed557"
     },
@@ -716,7 +716,7 @@
       "lastName": "Tabatha",
       "age": 3,
       "sex": 1,
-      "status": 0,
+      "status": 1,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a7be9aee10bd280fa"
     },
