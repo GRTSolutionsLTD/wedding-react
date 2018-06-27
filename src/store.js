@@ -1,22 +1,21 @@
 import { createStore, combineReducers, compose, applyMiddleware } from 'redux'
 import { routerReducer, routerMiddleware } from 'react-router-redux'
 import thunkMiddleware from 'redux-thunk'
-
 import todos from './reducers/todos'
 import visibilityFilter from './reducers/visibilityFilter'
-import DetailsReducer from './reducers/detailsReducer'
+import detailsResucer from './reducers/detailsReducer';
 
 export function configureStore(history, initialState) {
 
     const reducer = combineReducers({
         todos,
         visibilityFilter,
-        DetailsReducer,
+        detailsResucer,
         routing: routerReducer
     })
 
     const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
-    
+
     const store = createStore(
         reducer,
         initialState,
@@ -27,6 +26,5 @@ export function configureStore(history, initialState) {
             )
         )
     )
-
     return store
 }

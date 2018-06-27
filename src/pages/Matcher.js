@@ -1,5 +1,5 @@
 
-import React from 'react'
+ import React from 'react'
  import { Helmet } from 'react-helmet'
  import DropdownList from 'react-widgets/lib/DropdownList'
  import Dropdown from 'react-dropdown'
@@ -11,13 +11,12 @@ import React from 'react'
 var values;
  
  const options=['1','2']
-let indexMale=-1
-  let indexFemale=-1   
+ let indexMale=-1
+let indexFemale=-1   
 export class MatcherPage extends React.Component
 {
     constructor(props) {
         super(props);  
-          
         this.state = {
           users:[],
           male:[],
@@ -38,7 +37,6 @@ export class MatcherPage extends React.Component
           this.state.female=user.filter(p=>p.sex==0&&p.status==0).sort();      
           this.state.users=user;
             console.log(user.filter(p=>p.sex==1).sort());
-     
     }
 
     // removeTodo (id) {
@@ -50,35 +48,26 @@ export class MatcherPage extends React.Component
     //         this.todos;
     // }
     handleChangeFemale(event) {
-        
         console.log(event);
-     
         this.indexFemale=this.state.users.find(p1=>p1.firstName+" "+p1.lastName==event);
         this.indexFemale=  _.findIndex(this.state.users,this.indexFemale)
-      
         console.log("handleChangeFemale",this.indexFemale );    
     }
 
     handleChangeMale(event) {
-        
         console.log(event);
-       
        this.indexMale=this.state.users.find(p1=>p1.firstName+" "+p1.lastName==event);
        this.indexMale=  _.findIndex(this.state.users,this.indexMale)
-      
         console.log("handleChangeMale",this.indexMale );    
     }
   
       componentWillMount() {
-          debugger;
          this.componentDidMount();
       }
       makeMatch()
       {
-         
           if(this.indexFemale!=-1&&this.indexMale!=-1)
           {
-            
           alert(this.state.users[this.indexFemale].firstName+"  &&  "+this.state.users[this.indexMale].firstName+"   got married");
          this.state.users[this.indexFemale].status=1;
          this.state.users[this.indexMale].status=1;
@@ -92,28 +81,22 @@ export class MatcherPage extends React.Component
           else{
               alert("You need to make match betwwen male&feMale");
           }
+      }    
 
-      }     
       render() {  
         return (
-             <div>
-<div className="drop-down">       
-     <DropdownList className="c-todo__input" onChange={this.handleChangeMale} label="id" data={this.state.male.map(p=>p.firstName+" "+p.lastName)} textField={'text'}valueField={'value'}
+     <div>
+        <div className="drop-down">       
+            <DropdownList className="c-todo__input" onChange={this.handleChangeMale} label="id" data={this.state.male.map(p=>p.firstName+" "+p.lastName)} textField={'text'}valueField={'value'}
                     value={this.state.value} options={this.state.male}  placeholder="Select an male" /> 
                         <DropdownList  onChange={this.handleChangeFemale} label="id" data={this.state.female.map(p=>p.firstName+" "+p.lastName)} textField={'text'}valueField={'value'}
                     value={this.state.value} options={this.state.female}  placeholder="Select an female" /> 
-     {/* <DropdownList label="id" data={this.state.female}   options={this.state.female}  placeholder="Select an female" /> */}
-  </div>         
+        {/* <DropdownList label="id" data={this.state.female}   options={this.state.female}  placeholder="Select an female" /> */}
+        </div>         
           <button onClick={this.makeMatch}>Make a match</button>
           <button>  <Link to="/">Cancel</Link> </button>
-          </div>
-          
-           
+    </div>
         );
       }
-
-
 }
-
-
 export default MatcherPage
