@@ -5,13 +5,14 @@ import thunkMiddleware from 'redux-thunk'
 import todos from './reducers/todos'
 import visibilityFilter from './reducers/visibilityFilter'
 import DetailsReducer from './reducers/detailsReducer'
-
+import matcher from './reducers/matcher'
 export function configureStore(history, initialState) {
 
     const reducer = combineReducers({
         todos,
         visibilityFilter,
         DetailsReducer,
+        matcher,
         routing: routerReducer
     })
 

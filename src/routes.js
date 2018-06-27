@@ -4,7 +4,7 @@ import App from './components/App'
 import Register from './pages/Register'
 import Todo from './pages/Todo'
 import Details from './pages/Details'
-import Matcher from './pages/Matcher'
+import Matcher from './containers/Matcher'
 
 
 const routes = (

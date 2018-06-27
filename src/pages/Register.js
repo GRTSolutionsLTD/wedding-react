@@ -1,9 +1,9 @@
 import React,{ Component } from 'react';
 import Dropdown from 'react-dropdown';
-import DatePicker from 'react-datepicker';
+//import DatePicker from 'react-datepicker';
 import moment from 'moment';
 
-import 'react-datepicker/dist/react-datepicker.css';
+//import 'react-datepicker/dist/react-datepicker.css';
 import Popup from './Popup';
 import SubscriptionForm from './SubscriptionForm';
 
@@ -33,21 +33,22 @@ class SignUp extends Component{
      startDate: moment(),
      isOpen: false
    };  
-   this.handleChange = this.handleChange.bind(this);
+  // this.handleChange = this.handleChange.bind(this);
    this.handleChangeDate = this.handleChangeDate.bind(this);
- handleChange = (selectedOption) => {
-  this.setState({ selectedOption });
-  if (selectedOption) {
-    console.log(`Selected: ${selectedOption.label}`);
-  }
- }
- handleChangeDate(date) {
-  this.setState({
-      startDate: date
-  });
+ //handleChange = (selectedOption) => {
+ // this.setState({ selectedOption });
+ // if (selectedOption) {
+ //   console.log(`Selected: ${selectedOption.label}`);
+ // }
+ //};
 }
-signUp(){
-  debugger
+  handleChangeDate(date) {
+   this.setState({
+       startDate: date
+   });
+  }
+ signUp(){
+  debugger;
   console.log('this.state',this.state);
   console.log(peopleArray);
   peopleArray.push(this.state);
@@ -72,10 +73,10 @@ render(){
     <div className="form-inline" style={{margin:'5%'}}>
       <h2>Sign Up</h2>
         <div className="form-group">
-        <DatePicker
+       {/* <!-- <DatePicker
             selected={this.state.startDate}
             onChange={this.handleChangeDate}
-        />
+        />--> */}
           <input
             className="form-control"
             type="text"
@@ -151,4 +152,5 @@ render(){
       );
    }
  }
+
 export default SignUp;
