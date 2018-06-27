@@ -1,21 +1,49 @@
-// link {
-//     text-decoration: none;
-//   }
-//   button,
-//   input,
-//   optgroup,
-//   select,
-//   textarea {
-//     font-family: sans-serif; /* 1 */
-//     font-size: 100%; /* 1 */
-//     line-height: 1.15; /* 1 */
-//     margin: 0; /* 2 */
-//     background-color: cyan;
-//     text-decoration: none;
-//   }
-//   div {
-//     color: red;
-//   }
-div{
-  background-color: red;
+.c-todo__section {
+  position: relative;
+  color: #666;
+  margin: 10px auto;
+  max-width: 600px;
+  padding: 10px;
 }
+
+.c-todo__input {
+  width: 100%;
+  border-radius: 2em;
+  padding: 10px 20px;
+}
+
+.c-todo__input:focus {
+  border: solid 1px #A082D1;
+}
+
+.c-todo__icon {
+  position: absolute;
+  color: #ccc;
+  right: 0;
+  background-color: transparent;
+  border: 0;
+  line-height: 0;
+  width: 60px;
+  height: 40px;
+}
+
+.c-todo__icon:hover {
+  color: #A082D1;
+  background-color: transparent;
+}
+
+.c-todo__list {
+  padding: 0 20px;
+  width: 100%;
+}
+
+.c-todo__list_item {
+  display: block;
+  margin: 0 auto;
+  height: 40px;
+  line-height: 40px;
+  border: solid 1px #ccc;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
