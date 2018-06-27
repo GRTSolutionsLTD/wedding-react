@@ -13,12 +13,12 @@ const matcher = (state = initialState, action) => {
   switch (action.type) {
     case 'MATCHER_SHOW_MATCHER':
     console.log('SAVE_PERSON');
-    console.log("reducers-peopleArray",peopleArray)
+    console.log("reducers-peopleArray",peopleArray.map(p=>p.firstName))
     debugger
       return {
         id: action.id,
         text: action.text,
-        
+        firstName:peopleArray.map(p=>p.firstName),
         completed: false
      
       }
