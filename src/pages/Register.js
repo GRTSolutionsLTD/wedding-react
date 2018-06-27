@@ -1,9 +1,14 @@
 import React,{ Component } from 'react';
 import Dropdown from 'react-dropdown';
-import DatePicker from 'react-datepicker';
+//import DatePicker from 'react-datepicker';
 import moment from 'moment';
+<<<<<<< HEAD
 import { connect } from 'react-redux';
 import 'react-datepicker/dist/react-datepicker.css';
+=======
+
+//import 'react-datepicker/dist/react-datepicker.css';
+>>>>>>> 81088e7563c756cfa9fc35d5f15ae5280b5a642f
 import Popup from './Popup';
 import SubscriptionForm from './SubscriptionForm';
 import { Link } from 'react-router'
@@ -13,6 +18,7 @@ var _=require('lodash');
 class SignUp extends Component{
  constructor(props, context){
    super(props, context);
+<<<<<<< HEAD
     this.state={
       id:'',
       firtName:'',
@@ -91,6 +97,39 @@ _.deburr(e.firstName,{firstName:this.state.firstName});
     console.log(this.state.peopleArray);
     this.openPopup();
  }
+=======
+   this.state={
+     email:'',
+     password:'',
+     id:'',
+     firtName:'',
+     lastName:'',
+     age:'',
+     selectedOption: '',
+     startDate: moment(),
+     isOpen: false
+   };  
+  // this.handleChange = this.handleChange.bind(this);
+   this.handleChangeDate = this.handleChangeDate.bind(this);
+ //handleChange = (selectedOption) => {
+ // this.setState({ selectedOption });
+ // if (selectedOption) {
+ //   console.log(`Selected: ${selectedOption.label}`);
+ // }
+ //};
+}
+  handleChangeDate(date) {
+   this.setState({
+       startDate: date
+   });
+  }
+ signUp(){
+  debugger;
+  console.log('this.state',this.state);
+  console.log(peopleArray);
+  peopleArray.push(this.state);
+  console.log(peopleArray);
+>>>>>>> 81088e7563c756cfa9fc35d5f15ae5280b5a642f
 }
 
 openPopup = () => {
@@ -111,10 +150,10 @@ render(){
       <h2>Sign Up</h2>
       <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
         <div className="form-group">
-        <DatePicker
+       {/* <!-- <DatePicker
             selected={this.state.startDate}
             onChange={this.handleChangeDate}
-        />
+        />--> */}
           <input
             className="form-control"
             type="text"
@@ -182,9 +221,10 @@ render(){
         </Popup> 
         </div>
     </div>
-      )
+      );
    }
  }
+
 export default SignUp;
 // export default connect(
 //   state => ({

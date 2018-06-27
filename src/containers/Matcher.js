@@ -5,8 +5,12 @@ import axios, { AxiosResponse, AxiosInstance } from 'axios';
 import _ from 'lodash'
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
-
-export class MatcherPage extends React.Component {
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+// import * as MatcherActoins from '../actions/matcherActoins'
+import matcher from '../reducers/matcher';
+import {saveMatcher} from '../actions/matcherActoins'
+export class Matcher extends React.Component {
     user = [];
     constructor(props) {
        
@@ -73,14 +77,38 @@ export class MatcherPage extends React.Component {
     render() {
         return (
             <div>
+                
                 <div className="drop-down">
                     <Dropdown options={this.state.male.map(p => ({ value: p.firstName + " " + p.lastName, label: p.firstName + " " + p.lastName }))} onChange={this.handleChangeMale} value={this.state.value} placeholder="Select an male" />
                     <Dropdown options={this.state.female.map(p => ({ value: p.firstName + " " + p.lastName, label: p.firstName + " " + p.lastName }))} onChange={this.handleChangeFemale} value={this.state.value} placeholder="Select an female" />
                     </div>
                 <button onClick={this.makeMatch} className="c-button">Make a match</button>
                 <Link to="/" className="c-button">Cancel</Link>
+                <button
+          onClick={this.props.saveMatcher}
+            className="btn btn-primary"
+            type="button"
+            
+          >redux</button>
+
             </div>
         );
     }
 }
-export default MatcherPage
+const mapStateToProps = (state) => {
+    debugger
+    return {
+    };
+  }
+  
+    const mapDispatchToProps = (dispatch)=>{
+    debugger
+    return{
+        saveMatcher:()=>dispatch(saveMatcher()) 
+    }; 
+    
+    }
+    
+    export default connect(mapStateToProps,mapDispatchToProps)(Matcher)
+  
+  
