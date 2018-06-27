@@ -2,13 +2,10 @@ import React,{ Component } from 'react';
 import Dropdown from 'react-dropdown';
 //import DatePicker from 'react-datepicker';
 import moment from 'moment';
-<<<<<<< HEAD
 import { connect } from 'react-redux';
 import 'react-datepicker/dist/react-datepicker.css';
-=======
 
 //import 'react-datepicker/dist/react-datepicker.css';
->>>>>>> 81088e7563c756cfa9fc35d5f15ae5280b5a642f
 import Popup from './Popup';
 import SubscriptionForm from './SubscriptionForm';
 import { Link } from 'react-router'
@@ -18,7 +15,6 @@ var _=require('lodash');
 class SignUp extends Component{
  constructor(props, context){
    super(props, context);
-<<<<<<< HEAD
     this.state={
       id:'',
       firtName:'',
@@ -97,7 +93,6 @@ _.deburr(e.firstName,{firstName:this.state.firstName});
     console.log(this.state.peopleArray);
     this.openPopup();
  }
-=======
    this.state={
      email:'',
      password:'',
@@ -129,7 +124,6 @@ _.deburr(e.firstName,{firstName:this.state.firstName});
   console.log(peopleArray);
   peopleArray.push(this.state);
   console.log(peopleArray);
->>>>>>> 81088e7563c756cfa9fc35d5f15ae5280b5a642f
 }
 
 openPopup = () => {
