@@ -13,7 +13,6 @@ export function configureStore(history, initialState) {
         todos,
         visibilityFilter,
         detailsResucer,
-        DetailsReducer,
         register,
         matcher,
         routing: routerReducer
