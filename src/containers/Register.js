@@ -27,6 +27,7 @@ class SignUp extends Component{
       isOpen: false,
       date: new Date(),
       status:'0',
+      person:{id:'',lastName:'',firstName:'',email:'',password:'',age:'',selectedOption:'',startDate:moment(),status:'0'},
       peopleArray:[
         { id:"123",  lastNamename: "dave", firstName:"déjà vu",email:"tzippy6160@gmail.com",password:"100", age:"23"},
         { id:"456",  lastNamename: "chris",firstName:"déjeuner à la fourchette",email:"tzippy6160@gmail.com",password:"100", age:"23"},
@@ -74,7 +75,8 @@ tick() {
 
 signUp(){
   debugger
-  console.log("in signUp")
+  let per=this.state.person;
+  console.log(per);
 //const newpeopleArray=[...this.state.peopleArray];
 const newpeopleArray=_.forEach(this.state.peopleArray, (e) => {
   debugger
@@ -88,9 +90,8 @@ _.deburr(e.firstName,{firstName:this.state.firstName});
   
   if(!_.find(this.state.peopleArray, {id: this.state.id}))
    {
-    console.log('this.state',this.state);
     console.log(this.state.peopleArray);
-    this.state.peopleArray.push(this.state);
+    this.state.peopleArray.push(per);
     console.log(this.state.peopleArray);
     this.openPopup();
  }
@@ -118,11 +119,17 @@ render(){
             selected={this.state.startDate}
             onChange={this.handleChangeDate}
         />
-          <input
+          {/* <input
             className="form-control"
             type="text"
             placeholder="id"
             onChange={event=>this.setState({id:event.target.value})}
+          /> */}
+            <input
+            className="form-control"
+            type="text"
+            placeholder="id"
+            onChange={event=>this.setState({[person.id]:event.target.value})}
           />
           <input
             className="form-control"
@@ -199,10 +206,9 @@ const mapStateToProps = (state) => {
   const mapDispatchToProps = (dispatch)=>{
   debugger
   return{
-   savePerson:(state)=>dispatch(savePerson()) 
+   savePerson:()=>dispatch(savePerson()) 
   }; 
   
   }
   
   export default connect(mapStateToProps,mapDispatchToProps)(SignUp)
-
