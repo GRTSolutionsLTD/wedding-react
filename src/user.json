@@ -1,13 +1,14 @@
 {
   "data": [
     {
+<<<<<<< HEAD
       "id": "5b2b846aaf5c16789998b1b9",
       "firstName": "Broorya",
       "lastName": "Shtul",
       "age": 58,
       "sex": 0,
       "status": 1,
-      "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
+      "date": "Thu Jun 22 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a2a07ae6a977045a3"
     },
     {
@@ -17,27 +18,35 @@
       "age": 107,
       "sex": 1,
       "status": 1,
-      "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
+      "date": "Thu Apr 10 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846ad0c4bc3fabd7dbff"
     },
     {
+=======
+>>>>>>> 26a4fc22f0737dca35c9a37a727dca1595955725
       "id": "5b2b846a057ed78a2a264761",
-      "firstName": "Shmooel",
-      "lastName": "Sekler",
+      "firstName": "Almoni",
+      "lastName": "????",
       "age": 114,
-      "sex": 1,
-      "status": 1,
+      "sex": 0,
+      "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a577c3c0d4717df5e"
     },
     {
       "id": "5b2b846a63b1a2c370b2eb07",
-      "firstName": "Michail",
-      "lastName": "Waingarten",
+      "firstName": "Shira",
+      "lastName": "Ozana",
       "age": 102,
+<<<<<<< HEAD
       "sex": 0,
       "status": 1,
+      "date": "Thu Jun 21 2017 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
+=======
+      "sex": 1,
+      "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
+>>>>>>> 26a4fc22f0737dca35c9a37a727dca1595955725
       "partnerID": "5b2b846a25a0e4506a00d267"
     },
     {
@@ -46,8 +55,13 @@
       "lastName": "Cherie",
       "age": 30,
       "sex": 0,
+<<<<<<< HEAD
       "status": 1,
+      "date": "Thu Jun 21 1995 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
+=======
+      "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
+>>>>>>> 26a4fc22f0737dca35c9a37a727dca1595955725
       "partnerID": "5b2b846acf1dfc8de080d080"
     },
     {
@@ -87,7 +101,7 @@
       "age": 106,
       "sex": 0,
       "status": 0,
-      "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
+      "date": "Thu Jun 10 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a93902d0bd46cdf69"
     },
     {
@@ -96,7 +110,7 @@
       "lastName": "Levy",
       "age": 23,
       "sex": 0,
-      "status": 0,
+      "status": 1,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a618f6883ce7e4427"
     },
@@ -116,8 +130,13 @@
       "lastName": "Janine",
       "age": 92,
       "sex": 0,
+<<<<<<< HEAD
       "status": 1,
+      "date": "Thu Jun 21 2002 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
+=======
+      "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
+>>>>>>> 26a4fc22f0737dca35c9a37a727dca1595955725
       "partnerID": "5b2b846a60557df6d5219d4d"
     },
     {
@@ -156,7 +175,7 @@
       "lastName": "Alexandra",
       "age": 82,
       "sex": 0,
-      "status": 1,
+      "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a178e55b85c5ed557"
     },
@@ -246,7 +265,7 @@
       "lastName": "Gould",
       "age": 1,
       "sex": 1,
-      "status": 0,
+      "status": 1,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846ac036c93143fc5d55"
     },
@@ -286,7 +305,7 @@
       "lastName": "Lee",
       "age": 18,
       "sex": 0,
-      "status": 1,
+      "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a3b47421aeec8b439"
     },
@@ -306,7 +325,7 @@
       "lastName": "Earlene",
       "age": 72,
       "sex": 0,
-      "status": 1,
+      "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846ae0d052bab2abede3"
     },
@@ -326,7 +345,7 @@
       "lastName": "Valeria",
       "age": 70,
       "sex": 0,
-      "status": 1,
+      "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a7a1ac79bdd6e657d"
     },
@@ -346,7 +365,7 @@
       "lastName": "Eloise",
       "age": 115,
       "sex": 0,
-      "status": 1,
+      "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a9e3783bc40107992"
     },
@@ -386,7 +405,7 @@
       "lastName": "Melody",
       "age": 107,
       "sex": 0,
-      "status": 1,
+      "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846ace223a9d02b1dbfa"
     },
@@ -406,7 +425,7 @@
       "lastName": "Mara",
       "age": 111,
       "sex": 1,
-      "status": 1,
+      "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a1570f41d283bb2a0"
     },
@@ -426,7 +445,7 @@
       "lastName": "Tanner",
       "age": 84,
       "sex": 0,
-      "status": 1,
+      "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a59a45225941a41dc"
     },
@@ -436,19 +455,19 @@
       "lastName": "Lauri",
       "age": 73,
       "sex": 1,
-      "status": 1,
+      "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a9fc985efa4d6d212"
     },
     {
       "id": "5b2b846ae3ddeb6dd608b5cd",
-      "firstName": "Alta",
-      "lastName": "Sparks",
-      "age": 90,
-      "sex": 1,
-      "status": 1,
+      "firstName": "Francis",
+      "lastName": "Jan",
+      "age": 54,
+      "sex": 0,
+      "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
-      "partnerID": "5b2b846a2acf652349e8153d"
+      "partnerID": "5b2b846a249a357ee519da83"
     },
     {
       "id": "5b2b846ab4847946064ffcb9",
@@ -466,7 +485,7 @@
       "lastName": "Trevino",
       "age": 73,
       "sex": 0,
-      "status": 1,
+      "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a4ad9422712a701f5"
     },
@@ -496,7 +515,7 @@
       "lastName": "Romero",
       "age": 41,
       "sex": 1,
-      "status": 1,
+      "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a561757db6fa5b6db"
     },
@@ -506,7 +525,7 @@
       "lastName": "Patti",
       "age": 40,
       "sex": 1,
-      "status": 1,
+      "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846ae644b241b8a95f56"
     },
@@ -516,7 +535,7 @@
       "lastName": "Ratliff",
       "age": 102,
       "sex": 1,
-      "status": 1,
+      "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a019d2d21763a0361"
     },
@@ -546,7 +565,7 @@
       "lastName": "Luella",
       "age": 109,
       "sex": 1,
-      "status": 1,
+      "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846ab4a3bff6943cad39"
     },
@@ -706,7 +725,7 @@
       "lastName": "Rocha",
       "age": 26,
       "sex": 1,
-      "status": 1,
+      "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a9cf6e7d8a385d2ed"
     },
@@ -716,7 +735,7 @@
       "lastName": "Tabatha",
       "age": 3,
       "sex": 1,
-      "status": 1,
+      "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a7be9aee10bd280fa"
     },
@@ -776,7 +795,7 @@
       "lastName": "Aida",
       "age": 0,
       "sex": 1,
-      "status": 1,
+      "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a4447d048321db9d3"
     },
@@ -836,7 +855,7 @@
       "lastName": "Lauren",
       "age": 79,
       "sex": 0,
-      "status": 1,
+      "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a9db6dc0aa07d3d92"
     },
@@ -849,6 +868,22 @@
       "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846ad56923a3b121ffdb"
+    },
+    {
+      "id": 2,
+      "task": "fesdf",
+      "done": false,
+      "datef": "fgsdg",
+      "datel": "dsg",
+      "notes": "gdsg"
+    },
+    {
+      "id": 3,
+      "task": "fesdf",
+      "done": false,
+      "datef": "fgsdg",
+      "datel": "dsg",
+      "notes": "gdsg"
     }
   ]
 }

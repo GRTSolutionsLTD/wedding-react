@@ -1,33 +1,46 @@
-const peopleArray=[
-  { id:"123",  lastNamename: "dave", firstName:"déjà vu",email:"tzippy6160@gmail.com",status:1,password:"100", age:"23"},
-  { id:"456",  lastNamename: "chris",firstName:"déjeuner à la fourchette",email:"tzippy6160@gmail.com",status:1,password:"100", age:"23"},
-  { id:"789",  lastNamename: "bob",  firstName:"déjeuner",email:"tzippy6160@gmail.com",status:1,password:"100", age:"23"},
-  { id:"101",  lastNamename: "tom",  firstName:"dégagé",email:"tzippy6160@gmail.com",status:1,password:"100", age:"23"},
-  { id:"102",  lastNamename: "tim",  firstName:"décor",email:"tzippy6160@gmail.com",status:1,password:"100", age:"23"}
-]
-
-const initialState={people:peopleArray}
+var _ = require('lodash');
+const initialState = { data: [] }
 
 const DetailsReducer = (state = initialState, action) => {
+  let arr = [];
+  const { data } = state;
   switch (action.type) {
     case 'DETAILS_FILTER':
-    debugger
+      arr = [...data];
+      debugger
       console.log('filterDetails');
       debugger
-      return Object.assign({}, state, {
-        loading: true
-      })
+      arr = arr.filter(p => action.search == "" || p.status == action.search);
+      //  arr=(_.filter(arr, function(o) { 
+      //     return (action.serach==""||o.status == action.search)
+      // }))
+      return {
+        ...state,
+        displayData: arr
+      }
 
-    case 'DETAILS_SHOW_DETAILS':
-      //const location = action.response.query.results.channel.location
-      //const condition = action.response.query.results.channel.item.condition
-      return Object.assign({}, state, {
-        loading: false
-        //city: location.city,
-        //date: condition.date,
-        //temp: condition.temp,
-        //text: condition.text
-      })
+    case 'GET_ALL_DELAILS':
+      console.log('GET_ALL_DELAILS');
+      debugger
+      return {
+        ...state,
+        data: action.data.data,
+        displayData: action.data.data
+      }
+
+    case 'SORT_DATES':
+      debugger
+      console.log('SORT_DATES');
+      arr = [...data];
+      debugger
+      console.log('sortDates');
+      debugger
+      if (action.orderBy == 'Ascending') { arr = arr.sort(function (a, b) { return new Date(a.date) - new Date(b.date); }); }
+      else { arr = arr.sort(function (a, b) { return new Date(b.date) - new Date(a.date); }); }
+      return {
+        ...state,
+        displayData: arr
+      }
 
     default:
       return Object.assign({}, state, initialState)
