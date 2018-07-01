@@ -1,6 +1,29 @@
 {
   "data": [
     {
+<<<<<<< HEAD
+      "id": "5b2b846aaf5c16789998b1b9",
+      "firstName": "Broorya",
+      "lastName": "Shtul",
+      "age": 58,
+      "sex": 0,
+      "status": 1,
+      "date": "Thu Jun 22 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
+      "partnerID": "5b2b846a2a07ae6a977045a3"
+    },
+    {
+      "id": "5b2b846a5172bbb7fa72b79f",
+      "firstName": "Chaim",
+      "lastName": "Gvirtz",
+      "age": 107,
+      "sex": 1,
+      "status": 1,
+      "date": "Thu Apr 10 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
+      "partnerID": "5b2b846ad0c4bc3fabd7dbff"
+    },
+    {
+=======
+>>>>>>> 26a4fc22f0737dca35c9a37a727dca1595955725
       "id": "5b2b846a057ed78a2a264761",
       "firstName": "Almoni",
       "lastName": "????",
@@ -15,9 +38,15 @@
       "firstName": "Shira",
       "lastName": "Ozana",
       "age": 102,
+<<<<<<< HEAD
+      "sex": 0,
+      "status": 1,
+      "date": "Thu Jun 21 2017 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
+=======
       "sex": 1,
       "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
+>>>>>>> 26a4fc22f0737dca35c9a37a727dca1595955725
       "partnerID": "5b2b846a25a0e4506a00d267"
     },
     {
@@ -26,8 +55,13 @@
       "lastName": "Cherie",
       "age": 30,
       "sex": 0,
+<<<<<<< HEAD
+      "status": 1,
+      "date": "Thu Jun 21 1995 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
+=======
       "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
+>>>>>>> 26a4fc22f0737dca35c9a37a727dca1595955725
       "partnerID": "5b2b846acf1dfc8de080d080"
     },
     {
@@ -67,7 +101,7 @@
       "age": 106,
       "sex": 0,
       "status": 0,
-      "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
+      "date": "Thu Jun 10 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a93902d0bd46cdf69"
     },
     {
@@ -96,8 +130,13 @@
       "lastName": "Janine",
       "age": 92,
       "sex": 0,
+<<<<<<< HEAD
+      "status": 1,
+      "date": "Thu Jun 21 2002 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
+=======
       "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
+>>>>>>> 26a4fc22f0737dca35c9a37a727dca1595955725
       "partnerID": "5b2b846a60557df6d5219d4d"
     },
     {

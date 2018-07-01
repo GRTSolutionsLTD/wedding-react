@@ -1,0 +1,13 @@
+$background-color:red;
+$width:630px;
+
+@mixin div($width, $color) {
+    width: $width;
+    border:2px solid  $color;
+  }
+.Dropdown-control{
+    @include div($width, #6868ec);
+}
+.form-control{
+    @include div($width,$background-color);
+}

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, IndexRoute } from 'react-router'
+import { Route } from 'react-router'
 import App from './components/App'
 import Register from './containers/Register'
 import Todo from './pages/Todo'
@@ -9,7 +9,6 @@ import Matcher from './containers/Matcher'
 
 const routes = (
   <Route path="/" component={App}>
-    <IndexRoute component={Register} />
     <Route path="register" component={Register} />
     <Route path="todo" component={Todo} />
     <Route path="details" component={Details} />
