@@ -135,232 +135,210 @@ componentWillReceiveProps(nextProps)
   onSubmit = () => {
     debugger;
     if (!this.validateEmail(this.person.email)) {
+      alert("not a valid email");
      console.log("// not a valid email");
-     return 0;
+ 
     } else {
       console.log("// a valid email");
     }
     //
     if (!this.validateFirstName(this.person.firstName)) {
+      alert("not a valid firstName");
       console.log("// not a valid first_name");
-      return 1;
+ 
      } else {
        console.log("// a valid first_name");
      }
      //
      if (!this.validateLastName(this.person.lastName)) {
+      alert("not a valid lastName");
       console.log("// not a valid last_name");
-      return 2;
+ 
      } else {
        console.log("// a valid last_name");
      }
      if (!this.validateId(this.person.id)) {
+      alert("not a valid id");
       console.log("// not a valid id");
-      return 3;
+     
      } else {
        console.log("// a valid id");
      }
+     
      if (!this.validateAge(this.person.age)) {
+      alert("not a valid age");
       console.log("// not a valid age");
-      return 4;
+     
      } else {
        console.log("// a valid age");
      }
-     return 5;
+    
   }
     //////////////////////////////////////////////validation
-//   signUp=(event)=>{
-//     // const newpeopleArray=_.forEach(this.state.peopleArray, (e) => {
-//     //   debugger
-//     // console.log(_.deburr(e.firstName));
-//     // console.log(_.deburr(e.firstName,{firstName:this.state.firstName}));
-//     // _.deburr(e.firstName,{firstName:this.state.firstName});
-//     // });
-  
-// signUp(){
-  
-//   console.log("in signUp")
-// //const newpeopleArray=[...this.state.peopleArray];
-// const newpeopleArray=_.forEach(this.state.peopleArray, (e) => {
-  
-// console.log(_.deburr(e.firstName));
-// console.log(_.deburr(e.firstName,{firstName:this.state.firstName}));
-// _.deburr(e.firstName,{firstName:this.state.firstName});
-// });
-  
-//   console.log("newpeopleArray",newpeopleArray);
-//   console.log("peopleArray",this.state.peopleArray);
-  
-//   if(!_.find(this.state.peopleArray, {id: this.state.id}))
-//    {
-//     console.log('this.state',this.state);
-//     console.log(this.state.peopleArray);
-//     this.state.peopleArray.push(this.state);
-//     console.log(this.state.peopleArray);
-//     this.openPopup();
-//  }
-// }
-//     //   console.log("newpeopleArray",newpeopleArray);
-//     //   console.log("peopleArray",this.state.peopleArray);
-// debugger
-//   //   if (!_.find(this.props.data, { id: event.target.value })) {
-//   //     debugger;
-//   // this.props.savePerson(this.person);
-//   //   }
-//    while(this.onSubmit()!=5);
-//     if (!_.find(this.props.data, { id: this.person.id })) 
-//     {
-//       debugger;
-//   this.props.savePerson(this.person);
-//     }
-//   }
+  signUp=(event)=>{
+    // const newpeopleArray=_.forEach(this.state.peopleArray, (e) => {
+    //   debugger
+    // console.log(_.deburr(e.firstName));
+    // console.log(_.deburr(e.firstName,{firstName:this.state.firstName}));
+    // _.deburr(e.firstName,{firstName:this.state.firstName});
+    // });
 
-//   openPopup = () => {
-//     this.setState({
-//       isOpen: true
-//     });
-//   }
-//   closePopup = () => {
-//     this.setState({
-//       isOpen: false
-//     });
-//   }
+    //   console.log("newpeopleArray",newpeopleArray);
+    //   console.log("peopleArray",this.state.peopleArray);
+debugger
+  //   if (!_.find(this.props.data, { id: event.target.value })) {
+  //     debugger;
+  // this.props.savePerson(this.person);
+  //   }
+  //  while(this.onSubmit()!=5);
+  this.onSubmit();
+    if (!_.find(this.props.data, { id: this.person.id })) 
+    {
+      debugger;
+  this.props.savePerson(this.person);
+    }
+  }
 
-//   addPerson = (event) => {
-//     this.person[event.target.id] = event.target.value;
-//   }
+  openPopup = () => {
+    this.setState({
+      isOpen: true
+    });
+  }
+  closePopup = () => {
+    this.setState({
+      isOpen: false
+    });
+  }
 
-//   componentWillReceiveProps(nextProps) {
-//     debugger
-//     console.log("componentWillReceiveProps  ", nextProps.length === this.props.length)
-//     if (nextProps.length > this.props.length) {
-//       this.openPopup();
-//     }
-//   }
+  addPerson = (event) => {
+    this.person[event.target.id] = event.target.value;
+  }
 
-//   render() {
-//     const { selectedOption } = this.state;
-//     return (
-//       // <div className="form-inline" style={{ margin: '5%'}}>
-//         <div className="form-inline">
-//         <h2>Sign Up</h2>
-//         <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
-//         <div className="form-group">
-//           <DatePicker
-//             selected={this.state.startDate}
-//             onChange={this.handleChangeDate}
-//           />
-//           {<input
-//             className="form-control"
-//             type="text"
-//             placeholder="id"
-//             required
-//             id="id"
-//             onChange={(event) => this.addPerson(event)}
-//           />}
-//           <input
-//             className="form-control"
-//             type="text"
-//             placeholder="first-name"
-//             id="first-name"
-//             onChange={(event) => this.addPerson(event)}
-//           />
-//           <input
-//             className="form-control"
-//             type="text"
-//             placeholder="last-name"
-//             id="last-name"
-//             onChange={(event) => this.addPerson(event)}
-//           />
-//           <input
-//             className="form-control"
-//             type="text"
-//             placeholder="age"
-//             id="age"
-//             onChange={(event) => this.addPerson(event)}
-//           />
-//           <Dropdown
-//             className="form-control"
-//             options={this.state.options}
-//             placeholder="Select an option"
-//             value={selectedOption}
-//             onChange={this.handleChange}
-//           />
-//           <input
-//             className="form-control"
-//             type="text"
-//             placeholder="email"
-//             id="email"
-//             onChange={(event) => this.addPerson(event)}
-//           />
-//           <input
-//             className="form-control"
-//             type="password"
-//             style={{ marginRight: '5px' }}
-//             placeholder="password"
-//             id="password"
-//             onChange={(event) => this.addPerson(event)}
-//           />
-//           <button
-//             //className="btn btn-primary"
-//             className="c-button"
-//             type="button"
-//             // onClick={() => this.signUp()}
-//             onClick={(event) => this.signUp(event)}
-//           >
-//             Sign Up
-//           </button>
-//           {/* <button
-//             //className="btn btn-primary"
-//             className="c-button"
-//             type="checkValid"
-//             onClick={() => this.onSubmit()}
-//           >
-//             checkValid
-//           </button> */}
-//           {/* <button
-//             onClick={(event) => this.signUp(event)}
-//             className="btn btn-primary"
-//             type="button"
-//           >
-//             Cancel
-//           </button> */}
-//           <Link className="c-button" to="matcher">
-//             Cancel-matcher
-//          </Link>
-//           <Popup show={this.props.showSuccessPopup}
-//             onClose={this.props.closePopup}>
-//             <SubscriptionForm></SubscriptionForm>
-//           </Popup>
-//         </div>
-//       </div>
-//     )
-//   }
-// }
+  componentWillReceiveProps(nextProps) {
+    debugger
+    console.log("componentWillReceiveProps  ", nextProps.length === this.props.length)
+    if (nextProps.length > this.props.length) {
+      this.openPopup();
+    }
+  }
+
+  render() {
+    const { selectedOption } = this.state;
+    return (
+      // <div className="form-inline" style={{ margin: '5%'}}>
+        <div className="form-inline">
+        <h2>Sign Up</h2>
+        <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+        <div className="form-group">
+          <DatePicker
+            selected={this.state.startDate}
+            onChange={this.handleChangeDate}
+          />
+          {<input
+            className="form-control"
+            type="text"
+            placeholder="id"
+            required
+            id="id"
+            onChange={(event) => this.addPerson(event)}
+          />}
+          <input
+            className="form-control"
+            type="text"
+            placeholder="first-name"
+            id="first-name"
+            onChange={(event) => this.addPerson(event)}
+          />
+          <input
+            className="form-control"
+            type="text"
+            placeholder="last-name"
+            id="last-name"
+            onChange={(event) => this.addPerson(event)}
+          />
+          <input
+            className="form-control"
+            type="text"
+            placeholder="age"
+            id="age"
+            onChange={(event) => this.addPerson(event)}
+          />
+          <Dropdown
+            className="form-control"
+            options={this.state.options}
+            placeholder="Select an option"
+            value={selectedOption}
+            onChange={this.handleChange}
+          />
+          <input
+            className="form-control"
+            type="text"
+            placeholder="email"
+            id="email"
+            onChange={(event) => this.addPerson(event)}
+          />
+          <input
+            className="form-control"
+            type="password"
+            style={{ marginRight: '5px' }}
+            placeholder="password"
+            id="password"
+            onChange={(event) => this.addPerson(event)}
+          />
+          <button
+            //className="btn btn-primary"
+            className="c-button"
+            type="button"
+            // onClick={() => this.signUp()}
+            onClick={(event) => this.signUp(event)}
+          >
+            Sign Up
+          </button>
+          {/* <button
+            //className="btn btn-primary"
+            className="c-button"
+            type="checkValid"
+            onClick={() => this.onSubmit()}
+          >
+            checkValid
+          </button> */}
+          {/* <button
+            onClick={(event) => this.signUp(event)}
+            className="btn btn-primary"
+            type="button"
+          >
+            Cancel
+          </button> */}
+          <Link className="c-button" to="matcher">
+            Cancel-matcher
+         </Link>
+          <Popup show={this.props.showSuccessPopup}
+            onClose={this.props.closePopup}>
+            <SubscriptionForm></SubscriptionForm>
+          </Popup>
+        </div>
+      </div>
+    )
+  }
 }
-const mapStateToProps = (state) => {
-  
-  people:this.state.people;
-  debugger;
-   return {
 
-     data: state.register.data,
+const mapStateToProps = (state) => {
+  // people:this.state.people;
+ debugger;
+  return {
+
+    data: state.register.data,
     showSuccessPopup: state.register.showSuccessPopup,
     //peopleArray: state.register.peopleArray,
-     closePopup: state.register.showSuccessPopup
-   };
- }
-
- 
-  
-  
- const mapDispatchToProps = (dispatch) => {
-  debugger
-   return {
+    closePopup: state.register.showSuccessPopup
+  };
+}
+const mapDispatchToProps = (dispatch) => {
+ debugger
+  return {
     getAllUsers: () =>{ debugger;dispatch(getAllUsers())},
     savePerson: (person) => { debugger; dispatch(savePerson(person)) },
     closePopup: () => { debugger; dispatch(closePopup()) }
   };
- }
-
+}
 export default connect(mapStateToProps, mapDispatchToProps)(SignUp)
