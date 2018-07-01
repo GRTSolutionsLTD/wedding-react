@@ -39,27 +39,5 @@ export const filterDetails = (searchType) => {
         orderBy:mode
       }
     }
-// export const filterDetails = (filter) => {
-//   debugger
-//   //console.log(e);
-//   return {
-//   type: 'DETAILS_FILTER',
-//   filterBy:filter
-//   }
-// }
 
-// export const getDetails = () => async dispatch => {
-//   dispatch(loadDetails())
-//   const request = {
-//     city: 'taipei',
-//     search_type: 'yql',
-//     env: 'store://datatables.org/alltableswithkeys'
-//   }
-//   try {
-//     const response = await detailsApi.getDetails(request)
-//     dispatch(showDetails(response))
-//   } catch(e) {
-//     console.error(e)
-//   }
-// }
-  }
+ 
