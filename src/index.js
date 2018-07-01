@@ -11,6 +11,7 @@ import routes from './routes'
 import './styles/main.css'
 import './styles/main.scss'
 //import 'react-table/react-table.css'
+//import 'react-table/react-table.css'
  '@progress/kendo-theme-default/dist/all.css';
 
 import { DropdownList } from 'react-widgets'
