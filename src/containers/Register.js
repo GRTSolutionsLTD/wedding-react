@@ -135,38 +135,43 @@ componentWillReceiveProps(nextProps)
   onSubmit = () => {
     debugger;
     if (!this.validateEmail(this.person.email)) {
+      alert("not a valid email");
      console.log("// not a valid email");
-     return 0;
+ 
     } else {
       console.log("// a valid email");
     }
     //
     if (!this.validateFirstName(this.person.firstName)) {
+      alert("not a valid firstName");
       console.log("// not a valid first_name");
-      return 1;
+ 
      } else {
        console.log("// a valid first_name");
      }
      //
      if (!this.validateLastName(this.person.lastName)) {
+      alert("not a valid lastName");
       console.log("// not a valid last_name");
-      return 2;
+ 
      } else {
        console.log("// a valid last_name");
      }
      if (!this.validateId(this.person.id)) {
+      alert("not a valid id");
       console.log("// not a valid id");
-      return 3;
+     
      } else {
        console.log("// a valid id");
      }
      if (!this.validateAge(this.person.age)) {
+      alert("not a valid age");
       console.log("// not a valid age");
-      return 4;
+     
      } else {
        console.log("// a valid age");
      }
-     return 5;
+    
   }
     //////////////////////////////////////////////validation
   signUp=(event)=>{
@@ -184,7 +189,8 @@ debugger
   //     debugger;
   // this.props.savePerson(this.person);
   //   }
-   while(this.onSubmit()!=5);
+  //  while(this.onSubmit()!=5);
+  this.onSubmit();
     if (!_.find(this.props.data, { id: this.person.id })) 
     {
       debugger;
