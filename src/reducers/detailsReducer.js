@@ -36,7 +36,7 @@ const DetailsReducer = (state = initialState, action) => {
       console.log('sortDates');
       debugger
       if(action.orderBy=='Ascending')
-        {arr=arr.sort(function(a,b){ return new Date(a.date) - new Date(b.date);  });}
+            {arr=arr.sort(function(a,b){ return new Date(a.date) - new Date(b.date);  });}
       else  {arr=arr.sort(function(a,b){ return new Date(b.date) - new Date(a.date);  });}
       return {
         ...state,
