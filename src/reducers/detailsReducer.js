@@ -3,7 +3,6 @@ const initialState = { data: [] }
 
 
 const DetailsReducer = (state = initialState, action) => {
-<<<<<<< HEAD
   let arr = [];
   const { data } = state;
   switch (action.type) {
@@ -44,7 +43,6 @@ const DetailsReducer = (state = initialState, action) => {
         ...state,
         displayData: arr
       }
-=======
   // let arr =[];
   // arr=state.data;
   switch (action.type) {
@@ -69,11 +67,10 @@ const DetailsReducer = (state = initialState, action) => {
        
 
       })
->>>>>>> 26a4fc22f0737dca35c9a37a727dca1595955725
 
     default:
       return Object.assign({}, state, initialState)
   }
 }
-
+}
 export default DetailsReducer
