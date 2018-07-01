@@ -125,12 +125,12 @@ render(){
             placeholder="id"
             onChange={event=>this.setState({id:event.target.value})}
           /> */}
-            <input
+            {/* <input
             className="form-control"
             type="text"
             placeholder="id"
             onChange={event=>this.setState({[person.id]:event.target.value})}
-          />
+          /> */}
           <input
             className="form-control"
             type="text"

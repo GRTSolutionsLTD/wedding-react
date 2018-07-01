@@ -10,6 +10,8 @@ import registerServiceWorker from './registerServiceWorker'
 import routes from './routes'
 import './styles/main.css'
 import './styles/main.scss'
+//import 'react-table/react-table.css'
+import '@progress/kendo-theme-default/dist/all.css';
 
 import { DropdownList } from 'react-widgets'
 const state = window.__initialState__ || undefined
