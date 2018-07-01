@@ -76,7 +76,7 @@ export class Matcher extends React.Component {
                 <br/>  {this.state.femalesArray&&<Dropdown options={this.state.femalesArray.map(p => ({ value: p.id, label: p.firstName + " " + p.lastName }))} onChange={(e)=>this.handleChangeFemale(e)} value={this.state.value} placeholder="Select an female" />}
                 </div><br/><br/>
                 <button onClick={this.makeMatch} className="c-button">Make a match</button><br/><br/>
-                <Link to="/" className="c-button">Cancel</Link>
+                <Link to="register" className="c-button">Cancel</Link>
             </div>
         );
     }

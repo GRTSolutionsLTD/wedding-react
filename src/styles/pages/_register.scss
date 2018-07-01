@@ -1,6 +1,6 @@
 
-h3{
-    color: #6868ec;
+h3 {
+  color: #6868ec;
 }
 //  div{
 //      background-color:  pink;
@@ -17,32 +17,34 @@ h3{
 //   .c-button{
 //     @extend .foo;
 //   }
- 
- 
+
+
 //   @mixin padMasterJ ($param: 10px) {
 //     padding: $param;
 //   }
 $primaryColor: #ccc;
- 
- 
-  @mixin stuff {
-    color: red;
-  }
-  .c-button{
-    @include stuff;
-  } 
-.form-inline {
-    margin: 1.5%;
-    /* border: green; */
-    border: 1.5px solid red;
-    height: 513px;
-    width: 273px;
-    margin-left: 624px;
 
-        /* padding: 38px; */
-        padding-left: 38px;
-        padding-top: 14px;
+
+@mixin stuff {
+  color: red;
 }
+
+.c-button {
+  @include stuff;
+}
+
+.form-inline {
+  margin: 1.5%;
+  /* border: green; */
+  border: 1.5px solid red;
+  height: 513px;
+  width: 273px;
+  margin-left: 624px;
+  /* padding: 38px; */
+  padding-left: 38px;
+  padding-top: 14px;
+}
+
 input {
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -55,12 +57,19 @@ input {
   box-sizing: border-box;
   padding: 10px;
 }
+
 .Dropdown-root.form-control {
   width: 86%;
 }
+
 .Dropdown-control {
   width: 86%;
 }
+
+.sign-in-form {
+  margin-left: 820px;
+}
+
 .Dropdown-menu {
   background-color: white;
   border: 1px solid #ccc;

@@ -1,7 +1,6 @@
 {
   "data": [
     {
-<<<<<<< HEAD
       "id": "5b2b846aaf5c16789998b1b9",
       "firstName": "Broorya",
       "lastName": "Shtul",
@@ -22,14 +21,12 @@
       "partnerID": "5b2b846ad0c4bc3fabd7dbff"
     },
     {
-=======
->>>>>>> 26a4fc22f0737dca35c9a37a727dca1595955725
       "id": "5b2b846a057ed78a2a264761",
       "firstName": "Almoni",
       "lastName": "????",
       "age": 114,
       "sex": 0,
-      "status": 0,
+      "status": 1,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a577c3c0d4717df5e"
     },
@@ -38,15 +35,9 @@
       "firstName": "Shira",
       "lastName": "Ozana",
       "age": 102,
-<<<<<<< HEAD
-      "sex": 0,
-      "status": 1,
-      "date": "Thu Jun 21 2017 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
-=======
       "sex": 1,
       "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
->>>>>>> 26a4fc22f0737dca35c9a37a727dca1595955725
       "partnerID": "5b2b846a25a0e4506a00d267"
     },
     {
@@ -55,13 +46,8 @@
       "lastName": "Cherie",
       "age": 30,
       "sex": 0,
-<<<<<<< HEAD
-      "status": 1,
-      "date": "Thu Jun 21 1995 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
-=======
       "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
->>>>>>> 26a4fc22f0737dca35c9a37a727dca1595955725
       "partnerID": "5b2b846acf1dfc8de080d080"
     },
     {
@@ -130,13 +116,8 @@
       "lastName": "Janine",
       "age": 92,
       "sex": 0,
-<<<<<<< HEAD
       "status": 1,
-      "date": "Thu Jun 21 2002 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
-=======
-      "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
->>>>>>> 26a4fc22f0737dca35c9a37a727dca1595955725
       "partnerID": "5b2b846a60557df6d5219d4d"
     },
     {
@@ -175,7 +156,7 @@
       "lastName": "Alexandra",
       "age": 82,
       "sex": 0,
-      "status": 0,
+      "status": 1,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a178e55b85c5ed557"
     },
@@ -405,7 +386,7 @@
       "lastName": "Melody",
       "age": 107,
       "sex": 0,
-      "status": 0,
+      "status": 1,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846ace223a9d02b1dbfa"
     },
@@ -425,7 +406,7 @@
       "lastName": "Mara",
       "age": 111,
       "sex": 1,
-      "status": 0,
+      "status": 1,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a1570f41d283bb2a0"
     },
@@ -455,7 +436,7 @@
       "lastName": "Lauri",
       "age": 73,
       "sex": 1,
-      "status": 0,
+      "status": 1,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a9fc985efa4d6d212"
     },
@@ -485,7 +466,7 @@
       "lastName": "Trevino",
       "age": 73,
       "sex": 0,
-      "status": 0,
+      "status": 1,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a4ad9422712a701f5"
     },
@@ -535,7 +516,7 @@
       "lastName": "Ratliff",
       "age": 102,
       "sex": 1,
-      "status": 0,
+      "status": 1,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a019d2d21763a0361"
     },
@@ -625,7 +606,7 @@
       "lastName": "Mavis",
       "age": 81,
       "sex": 0,
-      "status": 0,
+      "status": 1,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a081f153d5b3384a8"
     },
@@ -635,7 +616,7 @@
       "lastName": "Mcdowell",
       "age": 20,
       "sex": 1,
-      "status": 0,
+      "status": 1,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a42eceb4ddaa1090e"
     },
@@ -705,7 +686,7 @@
       "lastName": "Mcpherson",
       "age": 17,
       "sex": 1,
-      "status": 0,
+      "status": 1,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a4d620ca88a1633c1"
     },
@@ -725,7 +706,7 @@
       "lastName": "Rocha",
       "age": 26,
       "sex": 1,
-      "status": 0,
+      "status": 1,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a9cf6e7d8a385d2ed"
     },
@@ -795,7 +776,7 @@
       "lastName": "Aida",
       "age": 0,
       "sex": 1,
-      "status": 0,
+      "status": 1,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a4447d048321db9d3"
     },
@@ -845,7 +826,7 @@
       "lastName": "Brady",
       "age": 114,
       "sex": 0,
-      "status": 0,
+      "status": 1,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846aa3ae7f3e6f3af5fa"
     },
@@ -855,7 +836,7 @@
       "lastName": "Lauren",
       "age": 79,
       "sex": 0,
-      "status": 0,
+      "status": 1,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a9db6dc0aa07d3d92"
     },
@@ -884,6 +865,70 @@
       "datef": "fgsdg",
       "datel": "dsg",
       "notes": "gdsg"
+    },
+    {
+      "person": {
+        "id": "206742900",
+        "lastName": "",
+        "firstName": "",
+        "email": "tamar@grth.co.il",
+        "password": "Shtul967",
+        "age": "20",
+        "selectedOption": "",
+        "startDate": "2018-07-01T11:45:13.602Z",
+        "status": "0",
+        "first-name": "tamar",
+        "last-name": "shtul"
+      },
+      "id": "mPDulKh"
+    },
+    {
+      "person": {
+        "id": "206742900",
+        "lastName": "",
+        "firstName": "",
+        "email": "",
+        "password": "Shtul967",
+        "age": "20",
+        "selectedOption": "",
+        "startDate": "2018-07-01T11:58:04.039Z",
+        "status": "0",
+        "first-name": "ff",
+        "last-name": "ff"
+      },
+      "id": "KAq3_O~"
+    },
+    {
+      "person": {
+        "id": "206742f900",
+        "lastName": "",
+        "firstName": "",
+        "email": "tamar@grth.co.il",
+        "password": "Shtul967",
+        "age": "20",
+        "selectedOption": "",
+        "startDate": "2018-07-01T11:58:04.039Z",
+        "status": "0",
+        "first-name": "ff",
+        "last-name": "ff"
+      },
+      "id": "GjGDpmp"
+    },
+    {
+      "person": {
+        "id": "206748900",
+        "lastName": "",
+        "firstName": "",
+        "email": "tamar@grth.co.il",
+        "password": "Shtul967",
+        "age": "20",
+        "selectedOption": "",
+        "startDate": "2018-07-01T11:58:04.039Z",
+        "status": "0",
+        "first-name": "ff",
+        "last-name": "ff"
+      },
+      "id": "nGw8W~Q"
     }
   ]
 }

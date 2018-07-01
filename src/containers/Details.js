@@ -118,7 +118,7 @@ class Details extends React.Component{
 
   render() {
      return (
-       <div>
+       <div className="details">
       {/* <h2>It is {this.state.date.toLocaleTimeString()}.</h2> */}
       <Grid
       style={{ height: '600px',width:'645px' }}

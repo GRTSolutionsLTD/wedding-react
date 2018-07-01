@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 
 const Navigation = ({ className, buttonClassName }) =>
   <nav className={className}>
-    <Link className={buttonClassName} to="/">
+    <Link className={buttonClassName} to="register">
       Register
     </Link>
     {/* reduser  בלינק מקשרים ל */}
