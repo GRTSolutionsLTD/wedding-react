@@ -8,17 +8,21 @@ const peopleArray=[
 
 const initialState={people:peopleArray}
 
+
 const DetailsReducer = (state = initialState, action) => {
+  // let arr =[];
+  // arr=state.data;
   switch (action.type) {
     case 'DETAILS_FILTER':
-    debugger
+    
       console.log('filterDetails');
-      debugger
+      
       return Object.assign({}, state, {
         loading: true
       })
 
     case 'DETAILS_SHOW_DETAILS':
+       
       //const location = action.response.query.results.channel.location
       //const condition = action.response.query.results.channel.item.condition
       return Object.assign({}, state, {
@@ -27,6 +31,8 @@ const DetailsReducer = (state = initialState, action) => {
         //date: condition.date,
         //temp: condition.temp,
         //text: condition.text
+       
+
       })
 
     default:

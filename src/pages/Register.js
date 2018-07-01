@@ -72,11 +72,11 @@ tick() {
 }
 
 signUp(){
-  debugger
+  
   console.log("in signUp")
 //const newpeopleArray=[...this.state.peopleArray];
 const newpeopleArray=_.forEach(this.state.peopleArray, (e) => {
-  debugger
+  
 console.log(_.deburr(e.firstName));
 console.log(_.deburr(e.firstName,{firstName:this.state.firstName}));
 _.deburr(e.firstName,{firstName:this.state.firstName});
@@ -119,7 +119,7 @@ _.deburr(e.firstName,{firstName:this.state.firstName});
    });
   }
  signUp(){
-  debugger;
+  ;
   console.log('this.state',this.state);
   console.log(peopleArray);
   peopleArray.push(this.state);

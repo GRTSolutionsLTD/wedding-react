@@ -73,11 +73,11 @@ tick() {
 }
 
 signUp(){
-  debugger
+  
   console.log("in signUp")
 //const newpeopleArray=[...this.state.peopleArray];
 const newpeopleArray=_.forEach(this.state.peopleArray, (e) => {
-  debugger
+  
 console.log(_.deburr(e.firstName));
 console.log(_.deburr(e.firstName,{firstName:this.state.firstName}));
 _.deburr(e.firstName,{firstName:this.state.firstName});
@@ -191,13 +191,13 @@ render(){
  }
 
 const mapStateToProps = (state) => {
-  debugger
+  
   return {
   };
 }
 
   const mapDispatchToProps = (dispatch)=>{
-  debugger
+  
   return{
    savePerson:(state)=>dispatch(savePerson()) 
   }; 

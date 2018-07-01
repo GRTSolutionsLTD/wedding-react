@@ -134,13 +134,13 @@ class Details extends React.Component{
 }
 
 const mapStateToProps = (state) => {
-  debugger
+  
   return {
   };
 }
 
   const mapDispatchToProps = (dispatch)=>{
-  debugger
+  
   return{
     filterDetails:()=>dispatch(filterDetails()) 
   }; 

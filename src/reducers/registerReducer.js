@@ -15,7 +15,7 @@ const register = (state = initialState, action) => {
   switch (action.type) {
     case 'SAVE_PERSON': 
     console.log('SAVE_PERSON');
-    debugger
+    
     //  if(!_.find(this.state.peopleArray, {id: this.state.id}))
     //  {
    console.log('this.state',state);

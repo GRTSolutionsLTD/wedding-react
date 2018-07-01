@@ -1,49 +1,21 @@
-.c-todo__section {
-  position: relative;
-  color: #666;
-  margin: 10px auto;
-  max-width: 600px;
-  padding: 10px;
+$width: 600px;
+ @mixin div($border, $margin-left,$margin-top,$padding) {
+  border: $border;
+  margin-left: $margin-left;
+  margin-top:$margin-top;
+  padding: $padding;
 }
-
-.c-todo__input {
-  width: 100%;
-  border-radius: 2em;
-  padding: 10px 20px;
+ .Dropdown-control{
+   width: $width/3;
+ }
+ .Dropdown-menu {
+  width: $width/3; 
 }
-
-.c-todo__input:focus {
-  border: solid 1px #A082D1;
+a.c-button {
+   text-align: center;
+  text-decoration: none;
 }
-
-.c-todo__icon {
-  position: absolute;
-  color: #ccc;
-  right: 0;
-  background-color: transparent;
-  border: 0;
-  line-height: 0;
-  width: 60px;
-  height: 40px;
+.matcher {
+  @include div(2px solid red, 40%, 3%,3% );
+  width: $width/2;
 }
-
-.c-todo__icon:hover {
-  color: #A082D1;
-  background-color: transparent;
-}
-
-.c-todo__list {
-  padding: 0 20px;
-  width: 100%;
-}
-
-.c-todo__list_item {
-  display: block;
-  margin: 0 auto;
-  height: 40px;
-  line-height: 40px;
-  border: solid 1px #ccc;
-  padding: 0 20px;
-  cursor: pointer;
-}
-

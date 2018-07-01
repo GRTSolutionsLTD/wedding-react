@@ -10,7 +10,7 @@ export const loadDetails = () => ({
 })
 
 export const filterDetails = (e) => {
-  debugger
+  
   console.log(e);
   return {
   type: 'DETAILS_FILTER'
