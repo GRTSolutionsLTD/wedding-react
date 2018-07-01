@@ -45,6 +45,24 @@ class Details extends React.Component{
                      };
       this.state.ez=this.state.list;//מערך עזר
   }
+  
+ componentDidMount() {
+  this.timerID = setInterval(
+    () => this.tick(),
+    1000
+  );
+}
+
+componentWillUnmount() {
+  clearInterval(this.timerID);
+}
+
+tick() {
+  console.log("tick 3");
+  this.setState({
+    date: new Date()
+  });
+}
   handleClick=()=> {
     //this.props.actions.getDetails();
   }
@@ -103,6 +121,7 @@ class Details extends React.Component{
   render() {
      return (
        <div>
+      {/* <h2>It is {this.state.date.toLocaleTimeString()}.</h2> */}
       <Grid
       style={{ height: '400px' }}
       data={this.state.list}>

@@ -12,3 +12,4 @@ export const GET_ALL_USERS="GET_ALL_USERS"
 export const UPDATE_MATCHER="UPDATE_MATCHER"
 export const GET_MALES="GET_MALES"
 export const GET_FEMALES="GET_FEMALES"
+export const CLOSE_POPUP='CLOSE_POPUP'
