@@ -11,18 +11,10 @@ export const loadDetails = () => ({
   type: 'DETAILS_SHOW_LOADING'
 })
 
-<<<<<<< HEAD
 export const filterDetails = (searchType) => {
   return{
     type: 'DETAILS_FILTER',
     search:searchType
-=======
-export const filterDetails = (e) => {
-  
-  console.log(e);
-  return {
-  type: 'DETAILS_FILTER'
->>>>>>> 26a4fc22f0737dca35c9a37a727dca1595955725
   }
 }
  
