@@ -1,9 +1,7 @@
 var _ = require('lodash');
 const initialState = { data: [] }
 
-
 const DetailsReducer = (state = initialState, action) => {
-<<<<<<< HEAD
   let arr = [];
   const { data } = state;
   switch (action.type) {
@@ -12,10 +10,10 @@ const DetailsReducer = (state = initialState, action) => {
       debugger
       console.log('filterDetails');
       debugger
-     arr = arr.filter(p => action.search == "" || p.status == action.search);
-    //  arr=(_.filter(arr, function(o) { 
-    //     return (action.serach==""||o.status == action.search)
-    // }))
+      arr = arr.filter(p => action.search == "" || p.status == action.search);
+      //  arr=(_.filter(arr, function(o) { 
+      //     return (action.serach==""||o.status == action.search)
+      // }))
       return {
         ...state,
         displayData: arr
@@ -31,45 +29,18 @@ const DetailsReducer = (state = initialState, action) => {
       }
 
     case 'SORT_DATES':
-    debugger
-    console.log('SORT_DATES');
+      debugger
+      console.log('SORT_DATES');
       arr = [...data];
       debugger
       console.log('sortDates');
       debugger
-      if(action.orderBy=='Ascending')
-            {arr=arr.sort(function(a,b){ return new Date(a.date) - new Date(b.date);  });}
-      else  {arr=arr.sort(function(a,b){ return new Date(b.date) - new Date(a.date);  });}
+      if (action.orderBy == 'Ascending') { arr = arr.sort(function (a, b) { return new Date(a.date) - new Date(b.date); }); }
+      else { arr = arr.sort(function (a, b) { return new Date(b.date) - new Date(a.date); }); }
       return {
         ...state,
         displayData: arr
       }
-=======
-  // let arr =[];
-  // arr=state.data;
-  switch (action.type) {
-    case 'DETAILS_FILTER':
-    
-      console.log('filterDetails');
-      
-      return Object.assign({}, state, {
-        loading: true
-      })
-
-    case 'DETAILS_SHOW_DETAILS':
-       
-      //const location = action.response.query.results.channel.location
-      //const condition = action.response.query.results.channel.item.condition
-      return Object.assign({}, state, {
-        loading: false
-        //city: location.city,
-        //date: condition.date,
-        //temp: condition.temp,
-        //text: condition.text
-       
-
-      })
->>>>>>> 26a4fc22f0737dca35c9a37a727dca1595955725
 
     default:
       return Object.assign({}, state, initialState)
