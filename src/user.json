@@ -6,7 +6,7 @@
       "lastName": "????",
       "age": 114,
       "sex": 0,
-        "status": 0,
+      "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a577c3c0d4717df5e"
     },
@@ -76,7 +76,7 @@
       "lastName": "Levy",
       "age": 23,
       "sex": 0,
-      "status": 0,
+      "status": 1,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a618f6883ce7e4427"
     },
@@ -226,7 +226,7 @@
       "lastName": "Gould",
       "age": 1,
       "sex": 1,
-      "status": 0,
+      "status": 1,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846ac036c93143fc5d55"
     },
@@ -756,7 +756,7 @@
       "lastName": "Aida",
       "age": 0,
       "sex": 1,
-        "status": 0,
+      "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a4447d048321db9d3"
     },
