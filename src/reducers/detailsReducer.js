@@ -1,7 +1,9 @@
 var _ = require('lodash');
 const initialState = { data: [] }
 
+
 const DetailsReducer = (state = initialState, action) => {
+<<<<<<< HEAD
   let arr = [];
   const { data } = state;
   switch (action.type) {
@@ -42,6 +44,32 @@ const DetailsReducer = (state = initialState, action) => {
         ...state,
         displayData: arr
       }
+=======
+  // let arr =[];
+  // arr=state.data;
+  switch (action.type) {
+    case 'DETAILS_FILTER':
+    
+      console.log('filterDetails');
+      
+      return Object.assign({}, state, {
+        loading: true
+      })
+
+    case 'DETAILS_SHOW_DETAILS':
+       
+      //const location = action.response.query.results.channel.location
+      //const condition = action.response.query.results.channel.item.condition
+      return Object.assign({}, state, {
+        loading: false
+        //city: location.city,
+        //date: condition.date,
+        //temp: condition.temp,
+        //text: condition.text
+       
+
+      })
+>>>>>>> 26a4fc22f0737dca35c9a37a727dca1595955725
 
     default:
       return Object.assign({}, state, initialState)

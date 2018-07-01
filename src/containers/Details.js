@@ -146,14 +146,14 @@ class Details extends React.Component{
 }
 
 const mapStateToProps = (state) => {
-  debugger
+  
   return {
     data:state.detailsResucer.displayData
   };
 }
 
   const mapDispatchToProps = (dispatch)=>{
-  debugger
+  
   return{
     filterDetails:(search)=>dispatch(filterDetails(search)),
     getAllDetails:()=>dispatch(getAllDetails()),

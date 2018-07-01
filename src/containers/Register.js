@@ -69,8 +69,118 @@ tick() {
  handleChangeDate(date) {
   this.setState({
       startDate: date
+<<<<<<< HEAD
   });
 }
+=======
+    });
+  }
+  //////////////////////////////////////////////validation
+  validateEmail = (email) => {
+    debugger;
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+  };
+  validateFirstName = (firstName) => {
+    debugger;
+    var re =/^[a-zA-Z\s]*$/;  
+      return re.test(firstName);
+  };
+  validateLastName = (lastName) => {
+    debugger;
+    var re =/^[a-zA-Z\s]*$/;  
+      return re.test(lastName);
+  };
+  validateId = (id) => {
+    debugger;
+    //var re = /^(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T(?:[01]\d|2[0-3]):[0-5]\d:[0-5]\d(?:Z|[+-][01]\d:[0-5]\d)$/;
+    var re =/^([0-9]{9})$/;
+    return re.test(id);
+  };
+  validateAge = (age) => {
+    debugger;
+    var re =/^([0-9]{1,2})$/;
+      return re.test(age);
+  };
+  //------------------------------------------------------
+  onSubmit = () => {
+    debugger;
+    if (!this.validateEmail(this.person.email)) {
+      alert("not a valid email");
+     console.log("// not a valid email");
+ 
+    } else {
+      console.log("// a valid email");
+    }
+    //
+    if (!this.validateFirstName(this.person.firstName)) {
+      alert("not a valid firstName");
+      console.log("// not a valid first_name");
+ 
+     } else {
+       console.log("// a valid first_name");
+     }
+     //
+     if (!this.validateLastName(this.person.lastName)) {
+      alert("not a valid lastName");
+      console.log("// not a valid last_name");
+ 
+     } else {
+       console.log("// a valid last_name");
+     }
+     if (!this.validateId(this.person.id)) {
+      alert("not a valid id");
+      console.log("// not a valid id");
+     
+     } else {
+       console.log("// a valid id");
+     }
+     
+     if (!this.validateAge(this.person.age)) {
+      alert("not a valid age");
+      console.log("// not a valid age");
+     
+     } else {
+       console.log("// a valid age");
+     }
+    
+  }
+    //////////////////////////////////////////////validation
+  signUp=(event)=>{
+    // const newpeopleArray=_.forEach(this.state.peopleArray, (e) => {
+    //   debugger
+    // console.log(_.deburr(e.firstName));
+    // console.log(_.deburr(e.firstName,{firstName:this.state.firstName}));
+    // _.deburr(e.firstName,{firstName:this.state.firstName});
+    // });
+
+    //   console.log("newpeopleArray",newpeopleArray);
+    //   console.log("peopleArray",this.state.peopleArray);
+debugger
+  //   if (!_.find(this.props.data, { id: event.target.value })) {
+  //     debugger;
+  // this.props.savePerson(this.person);
+  //   }
+  //  while(this.onSubmit()!=5);
+  this.onSubmit();
+    if (!_.find(this.props.data, { id: this.person.id })) 
+    {
+      debugger;
+  this.props.savePerson(this.person);
+    }
+  }
+
+  openPopup = () => {
+    this.setState({
+      isOpen: true
+    });
+  }
+  closePopup = () => {
+    this.setState({
+      isOpen: false
+    });
+  }
+>>>>>>> 26a4fc22f0737dca35c9a37a727dca1595955725
 
 signUp(){
   debugger

@@ -22,10 +22,12 @@ const register = (state = initialState, action) => {
 
     case 'SAVE_PERSON': 
     console.log('SAVE_PERSON');
-    console.log(state);
-    debugger
-  // if(action.data.person.id!=""&&!_.find(state.data, {id:action.data.person.id}))
-  // { 
+    
+    //  if(!_.find(this.state.peopleArray, {id: this.state.id}))
+    //  {
+   console.log('this.state',state);
+   //state.push(action);
+  
     return{
     ...state,
     data:[...state.data,action.data.person],
