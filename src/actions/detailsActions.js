@@ -62,3 +62,4 @@ export const filterDetails = (searchType) => {
 //     console.error(e)
 //   }
 // }
+  }

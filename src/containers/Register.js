@@ -69,12 +69,9 @@ tick() {
  handleChangeDate(date) {
   this.setState({
       startDate: date
-<<<<<<< HEAD
   });
 }
-=======
-    });
-  }
+   
   //////////////////////////////////////////////validation
   validateEmail = (email) => {
     debugger;
@@ -180,7 +177,6 @@ debugger
       isOpen: false
     });
   }
->>>>>>> 26a4fc22f0737dca35c9a37a727dca1595955725
 
 signUp(){
   debugger
