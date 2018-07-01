@@ -11,7 +11,6 @@ import SubscriptionForm from '../pages/SubscriptionForm';
 import { Link } from 'react-router'
 var _=require('lodash');
 
-
 class SignUp extends Component{
  constructor(props, context){
    super(props, context);
@@ -84,7 +83,6 @@ console.log(_.deburr(e.firstName));
 console.log(_.deburr(e.firstName,{firstName:this.state.firstName}));
 _.deburr(e.firstName,{firstName:this.state.firstName});
 });
-  
   console.log("newpeopleArray",newpeopleArray);
   console.log("peopleArray",this.state.peopleArray);
   
