@@ -1,27 +1,20 @@
-var _ = require('lodash');
+import _ from 'lodash';
+import { eSortDirection } from '../constants/enums';
+
 const initialState = { data: [] }
 
 const DetailsReducer = (state = initialState, action) => {
-  let arr = [];
-  const { data } = state;
+  const { data, displayData } = state;
+
   switch (action.type) {
+
     case 'DETAILS_FILTER':
-      arr = [...data];
-      debugger
-      console.log('filterDetails');
-      debugger
-      arr = arr.filter(p => action.search == "" || p.status == action.search);
-      //  arr=(_.filter(arr, function(o) { 
-      //     return (action.serach==""||o.status == action.search)
-      // }))
       return {
         ...state,
-        displayData: arr
+        displayData: getFilterUsers([...data],action.search)
       }
 
     case 'GET_ALL_DELAILS':
-      console.log('GET_ALL_DELAILS');
-      debugger
       return {
         ...state,
         data: action.data.data,
@@ -29,22 +22,27 @@ const DetailsReducer = (state = initialState, action) => {
       }
 
     case 'SORT_DATES':
-      debugger
-      console.log('SORT_DATES');
-      arr = [...data];
-      debugger
-      console.log('sortDates');
-      debugger
-      if (action.orderBy == 'Ascending') { arr = arr.sort(function (a, b) { return new Date(a.date) - new Date(b.date); }); }
-      else { arr = arr.sort(function (a, b) { return new Date(b.date) - new Date(a.date); }); }
       return {
         ...state,
-        displayData: arr
+        displayData: sortUsersByDates([...displayData], action.orderBy)
       }
 
     default:
       return Object.assign({}, state, initialState)
   }
+}
+
+
+let getFilterUsers = (users, searchValue) => {
+  return _.filter(users, user => user.status == searchValue);
+}
+
+let sortUsersByDates = (users, sortDirection) => {
+  debugger
+  if (sortDirection == eSortDirection.Ascending.id)
+    return users.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+  return users.sort((a, b) => new Date(b.date) - new Date(a.date));
 }
 
 export default DetailsReducer

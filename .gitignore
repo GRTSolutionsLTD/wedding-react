@@ -22,3 +22,7 @@ npm-debug.log
 package-lock.json
 
 package-lock.json
+
+**/.vs
+
+.vs

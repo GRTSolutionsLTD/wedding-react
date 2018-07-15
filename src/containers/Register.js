@@ -1,5 +1,3 @@
-
-
 import React, { Component } from 'react';
 import Dropdown from 'react-dropdown';
 import DatePicker from 'react-datepicker';
@@ -33,18 +31,6 @@ componentWillReceiveProps(nextProps)
     }
 }
 
-  // componentWillReceiveProps(nextProps) {
-   
-  //   console.log("componentWillUpdate", nextProps);
-
-  //   if (nextProps.showErrorPopup) {
-  //     debugger;
-      
-  //     this.openPopup();
-  //   }
-  //   return true;
-  // }
-
   constructor(props, context) {
     super(props, context);
     this.state = {
@@ -59,18 +45,10 @@ componentWillReceiveProps(nextProps)
       isOpen: false,
       date: new Date(),
       status: '0',
-      // peopleArray: [
-      //   { id: "123", lastNamename: "dave", firstName: "déjà vu", email: "tzippy6160@gmail.com", password: "100", age: "23" },
-      //   { id: "456", lastNamename: "chris", firstName: "déjeuner à la fourchette", email: "tzippy6160@gmail.com", password: "100", age: "23" },
-      //   { id: "789", lastNamename: "bob", firstName: "déjeuner", email: "tzippy6160@gmail.com", password: "100", age: "23" },
-      //   { id: "101", lastNamename: "tom", firstName: "dégagé", email: "tzippy6160@gmail.com", password: "100", age: "23" },
-      //   { id: "102", lastNamename: "tim", firstName: "décor", email: "tzippy6160@gmail.com", password: "100", age: "23" }
-      // ],
       options: [
         'female', 'male'
       ],
       users: [
-        
       ]
     };
     this.handleChange = this.handleChange.bind(this);
@@ -106,25 +84,27 @@ componentWillReceiveProps(nextProps)
       startDate: date
     });
   }
-  //////////////////////////////////////////////validation
+
   validateEmail = (email) => {
     debugger;
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(email);
   };
+
   validateFirstName = (firstName) => {
     debugger;
     var re =/^[a-zA-Z\s]*$/;  
       return re.test(firstName);
   };
+
   validateLastName = (lastName) => {
     debugger;
     var re =/^[a-zA-Z\s]*$/;  
       return re.test(lastName);
   };
+
   validateId = (id) => {
     debugger;
-    //var re = /^(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T(?:[01]\d|2[0-3]):[0-5]\d:[0-5]\d(?:Z|[+-][01]\d:[0-5]\d)$/;
     var re =/^([0-9]{9})$/;
     return re.test(id);
   };
@@ -133,7 +113,7 @@ componentWillReceiveProps(nextProps)
     var re =/^([0-9]{1,2})$/;
       return re.test(age);
   };
-  //------------------------------------------------------
+
   onSubmit = () => {
     debugger;
     if (!this.validateEmail(this.person.email)) {
@@ -143,7 +123,7 @@ componentWillReceiveProps(nextProps)
     } else {
       console.log("// a valid email");
     }
-    //
+   
     if (!this.validateFirstName(this.person.firstName)) {
       alert("not a valid firstName");
       console.log("// not a valid first_name");
@@ -151,7 +131,7 @@ componentWillReceiveProps(nextProps)
      } else {
        console.log("// a valid first_name");
      }
-     //
+     
      if (!this.validateLastName(this.person.lastName)) {
       alert("not a valid lastName");
       console.log("// not a valid last_name");
@@ -159,6 +139,7 @@ componentWillReceiveProps(nextProps)
      } else {
        console.log("// a valid last_name");
      }
+
      if (!this.validateId(this.person.id)) {
       alert("not a valid id");
       console.log("// not a valid id");
@@ -213,6 +194,7 @@ debugger
   }
 
   addPerson = (event) => {
+    this.person.startDate.toString().slice(0,15);
     this.person[event.target.id] = event.target.value;
   }
 
@@ -235,6 +217,8 @@ debugger
           <DatePicker
             selected={this.state.startDate}
             onChange={this.handleChangeDate}
+            dateFormat="YYYY-MM-DD"
+
           />
           {<input
             className="form-control"
@@ -266,7 +250,7 @@ debugger
             onChange={(event) => this.addPerson(event)}
           />
           <Dropdown
-            className="form-control"
+            className="form-control sign-in-drop-down"
             options={this.state.options}
             placeholder="Select an option"
             value={selectedOption}

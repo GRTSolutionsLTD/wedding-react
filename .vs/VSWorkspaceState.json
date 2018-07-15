@@ -3,8 +3,13 @@
     "",
     "\\src",
     "\\src\\actions",
+    "\\src\\components",
     "\\src\\constants",
-    "\\src\\reducers"
+    "\\src\\containers",
+    "\\src\\reducers",
+    "\\src\\styles",
+    "\\src\\styles\\pages"
   ],
+  "SelectedNode": "\\src\\index.js",
   "PreviewInSolutionExplorer": false
 }
