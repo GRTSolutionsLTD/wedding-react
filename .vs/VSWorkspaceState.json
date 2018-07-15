@@ -2,9 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\actions",
-    "\\src\\constants",
-    "\\src\\reducers"
+    "\\src\\containers",
+    "\\src\\styles",
+    "\\src\\styles\\pages"
   ],
+  "SelectedNode": "\\src\\containers\\Register.js",
   "PreviewInSolutionExplorer": false
 }

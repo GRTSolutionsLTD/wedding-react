@@ -1,26 +1,61 @@
-$width: 600px;
- @mixin div($border, $margin-left,$margin-top,$padding) {
+@mixin div($border, $margin-left,$margin-top,$padding) {
+
   border: $border;
+
   margin-left: $margin-left;
-  margin-top:$margin-top;
+
+  margin-top: $margin-top;
+
   padding: $padding;
-}
- .Dropdown-control{
-   width: $width/3;
- }
-.Dropdown-control {
-  width: $width/3;
-}
-a.c-button {
-   text-align: center;
-  text-decoration: none;
-}
-.matcher {
-  @include div(2px solid $border-color-red, 40%, 3%,3% );
-  width: $width/2;
-}
-.drop-down .Dropdown-menu {
-  width: 200px;
-  margin-left: 0px;
+
 }
 
+.matcher .Dropdown-control{
+
+   width:200px;
+
+}
+
+.matcher .Dropdown-menu {
+
+  width: 200px;
+
+  margin-left:1.9px;
+
+}
+
+a.c-button {
+
+   text-align: center;
+
+  text-decoration: none;
+
+}
+
+.matcher {
+
+  @include div(2px solid red, 42%, 3%,3% );
+
+  width:300px;
+
+}
+
+ 
+
+popup{
+
+  position: absolute;
+
+    border: 1.5px solid red;
+
+    padding: 10px;
+
+    margin-left: 1px;
+
+    margin-top: -230px;
+
+    background-color: gainsboro;
+
+    width: 395px;
+
+}
