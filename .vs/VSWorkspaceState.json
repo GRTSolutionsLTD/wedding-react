@@ -10,6 +10,11 @@
     "\\src\\styles",
     "\\src\\styles\\pages"
   ],
-  "SelectedNode": "\\src\\index.js",
+  "SelectedNode": ["\\src\\index.js",
+    "\\src\\containers",
+    "\\src\\styles",
+    "\\src\\styles\\pages"
+  ],
+  "SelectedNode": "\\src\\containers\\Register.js",
   "PreviewInSolutionExplorer": false
 }

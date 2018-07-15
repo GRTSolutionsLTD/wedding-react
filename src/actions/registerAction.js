@@ -10,7 +10,6 @@ export const showRegister = response => ({
 export const loadRegister = () => ({
   type: 'REGISTER_SHOW_LOADING'
 })
-
 export const savePerson = (person) => (
   dispatch => {
   debugger
@@ -42,26 +41,8 @@ export const getAllUsers = () => (
           }
           )
   })
-
-
-
 export const closePopup = () => {
   return {
   type: 'CLOSE_POPUP',
-  }
-}
-
-export const getRegister = () => async dispatch => {
-  dispatch(loadRegister())
-  const request = {
-     city: 'taipei',
-     search_type: 'yql',
-     env: 'store://datatables.org/alltableswithkeys'
-  }
-  try {
-    const response = await registerApi.getRegister(request)
-    dispatch(showRegister(response))
-  } catch(e) {
-    console.error(e)
   }
 }

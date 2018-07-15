@@ -1,22 +1,11 @@
 export const eStatus = {
-    Single:  {
+    Single: {
         id: 0,
         value: 'Single'
     },
     Married: {
         id: 1,
         value: 'Married'
-    }
-};
-
-export const eSex = {
-    Male: {
-        id: 0,
-        value: 'male'
-    },
-    Female: {
-        id: 1,
-        value: 'Female'
     }
 };
 
@@ -30,5 +19,23 @@ export const eSortDirection = {
         value: 'Descending'
     }
 };
-
-
+export const eSex = {
+    Male: {
+        id: 0,
+        value: 'male'
+    },
+    Female: {
+        id: 1,
+        value: 'female'
+    }
+};
+export const eeStatus = {
+    Single: {
+        id: 0,
+        value: 'Single'
+    },
+    Married: {
+        id: 1,
+        value: 'Married'
+    }
+};

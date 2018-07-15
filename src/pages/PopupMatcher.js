@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Popup extends React.Component {
+class PopupMatcher extends React.Component {
   render() {
     if(!this.props.show) {
       return null;
@@ -9,7 +9,6 @@ class Popup extends React.Component {
     return (
       <div className="popup-backdrop">
         <div className="popup">
-       
           {this.props.children}
         </div>
       </div>
@@ -17,4 +16,4 @@ class Popup extends React.Component {
   }
 }
 
-export default Popup;
+export default PopupMatcher;
