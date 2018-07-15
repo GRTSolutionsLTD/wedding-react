@@ -1,0 +1,14 @@
+{
+    "message": {
+        "register":{
+            "showSuccessPopup":"showSuccessPopup",
+            "closePopup":"closePopup"
+        },
+        "matcher":{
+            "succeeded":" got married",
+            "failed":"Soory try again........",
+            "detailsWrong":"You need to make match between male & feMale"
+        }
+      
+    }
+  }
