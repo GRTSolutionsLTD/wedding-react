@@ -1,78 +1,44 @@
-
 h3 {
   color: #6868ec;
 }
-//  div{
-//      background-color:  pink;
-//  }
-//  a{
-//      background-color:  pink;
-//  }
-//  h2{
-//      color: pink;
-//  }
-// .foo {
-//     color: orangered;
-//   }
-//   .c-button{
-//     @extend .foo;
-//   }
-
-
-//   @mixin padMasterJ ($param: 10px) {
-//     padding: $param;
-//   }
-$primaryColor: #ccc;
-
-
 @mixin stuff {
-  color: red;
+  color: $border-color-red;
 }
-
 .c-button {
   @include stuff;
 }
-
 .form-inline {
   margin: 1.5%;
-  /* border: green; */
-  border: 1.5px solid red;
+  border: 1.5px solid $border-color-red;
   height: 513px;
   width: 273px;
   margin-left: 624px;
-  /* padding: 38px; */
   padding-left: 38px;
   padding-top: 14px;
 }
-
 input {
   display: -ms-inline-flexbox;
   display: inline-flex;
-  width: 200px;
+  width: 196.5px;
   outline: none;
-  // border: solid 1px #ccc;
   border: solid 1px $primaryColor;
   border-radius: 2px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 10px;
 }
-
 .Dropdown-root.form-control {
-  width: 86%;
+  width: 84%;
 }
-
 .Dropdown-control {
-  width: 86%;
+  width: 84%;
 }
-
 .sign-in-form {
   margin-left: 820px;
 }
-
 .Dropdown-menu {
   background-color: white;
-  border: 1px solid #ccc;
+  border: 1px solid $primaryColor;
   -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
   -webkit-box-sizing: border-box;
@@ -87,13 +53,20 @@ input {
   -webkit-overflow-scrolling: touch;
   margin-left: -6%;
 }
-
-
 .popup {
   position: absolute;
-  border: 1.5px solid red;
+  border: 1.5px solid $border-color-red;
   padding: 13px;
   margin-left: -120px;
   margin-top: -250px;
   background-color: gainsboro;
+}
+.sign-in-drop-down .Dropdown-control {
+  width: 196.5px;
+  margin-left: -13px;
+  margin-top: -9px;
+}
+.sign-in-drop-down .Dropdown-menu {
+  width: 196px;
+  margin-left: -13px;
 }

@@ -1,0 +1,13 @@
+{
+    "message": {
+    "register":{
+ "good":"good",
+ "exist":"exist"
+    },
+    "matcher":{
+    "succeeded":"succeeded",
+    "failed":"Soory try again........",
+    "wrong":"You need to make match between male & feMale"
+    }
+    }
+    }

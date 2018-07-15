@@ -8,14 +8,19 @@ $width: 600px;
  .Dropdown-control{
    width: $width/3;
  }
- .Dropdown-menu {
-  width: $width/3; 
+.Dropdown-control {
+  width: $width/3;
 }
 a.c-button {
    text-align: center;
   text-decoration: none;
 }
 .matcher {
-  @include div(2px solid red, 40%, 3%,3% );
+  @include div(2px solid $border-color-red, 40%, 3%,3% );
   width: $width/2;
 }
+.drop-down .Dropdown-menu {
+  width: 200px;
+  margin-left: 0px;
+}
+

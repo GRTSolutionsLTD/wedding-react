@@ -1,5 +1,5 @@
 
-$background-color:red;
+$background-color:$border-color-red;
 $width:630px;
 .details{
         @mixin div($width, $color) {
@@ -12,4 +12,13 @@ $width:630px;
         .form-control{
             @include div($width,$background-color);
         }
+}
+.sign-in-drop-down-details .Dropdown-control {
+    width: 630.5px;
+    margin-left: -14px;
+    margin-top: -8.5px;
+}
+.sign-in-drop-down-details .Dropdown-menu {
+    left: 35px;
+    width: 628px;
 }

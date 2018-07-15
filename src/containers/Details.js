@@ -139,7 +139,7 @@ class Details extends React.Component{
             />
       {/* <button value="sortByDateAscending"  onClick={this.sortByDate.bind(this, 'Ascending')}>sort by date - Ascending</button> */}
       {/* <button value="sortByDateDescending" onClick={this.sortByDate.bind(this, 'Descending')}>sort by date - Descending</button> */}
-      <Dropdown options={this.state.sort} onChange={this.sortByDate} placeholder="sort Descending or Ascending"/>
+      <Dropdown className="form-control sign-in-drop-down-details" options={this.state.sort} onChange={this.sortByDate} placeholder="sort Descending or Ascending"/>
   </div>
  )
    }

@@ -1,11 +1,9 @@
-
-
-import React, { Component } from 'react';
+import React from 'react'
+import {Component } from 'react';
 import Dropdown from 'react-dropdown';
 import DatePicker from 'react-datepicker';
 import moment from 'moment';
 import { connect } from 'react-redux';
-import * as registerActions from '../actions/registerAction';
 import { savePerson } from '../actions/registerAction'
 import { getAllUsers } from '../actions/registerAction'
 import { closePopup } from '../actions/registerAction'
@@ -13,226 +11,168 @@ import 'react-datepicker/dist/react-datepicker.css';
 import Popup from '../pages/Popup';
 import SubscriptionForm from '../pages/SubscriptionForm';
 import { Link } from 'react-router'
-var _ = require('lodash');
+import * as _ from 'lodash';
+import {eSex,eStatus} from '../constants/enums'
+import * as popupConfig from '../constants/popupConfig.json';
 
 class SignUp extends Component {
-  person = { id: '', lastName: '', firstName: '', email: '', password: '', age: '', selectedOption: '', startDate: moment(), status: '0' }
-
-componentWillMount(){
-  debugger
-  this.props.getAllUsers();
- 
-}
-componentWillReceiveProps(nextProps) 
-{
-  debugger
-  console.log("componentWillUpdate", nextProps);
-    if (this.props.data !== nextProps.data) 
-    {
-        this.setState({users: [...nextProps.data] });
-    }
-}
-
-  // componentWillReceiveProps(nextProps) {
-   
-  //   console.log("componentWillUpdate", nextProps);
-
-  //   if (nextProps.showErrorPopup) {
-  //     debugger;
-      
-  //     this.openPopup();
-  //   }
-  //   return true;
-  // }
+  person = { id: '', lastName: '', firstName: '', email: '', password: '', age: '', selectedOption: '', startDate: moment(), status:'' }
 
   constructor(props, context) {
     super(props, context);
     this.state = {
-      id: '',
-      firtName: '',
-      lastName: '',
-      email: '',
-      password: '',
-      age: '',
       selectedOption: '',
       startDate: moment(),
-      isOpen: false,
       date: new Date(),
-      status: '0',
-      // peopleArray: [
-      //   { id: "123", lastNamename: "dave", firstName: "déjà vu", email: "tzippy6160@gmail.com", password: "100", age: "23" },
-      //   { id: "456", lastNamename: "chris", firstName: "déjeuner à la fourchette", email: "tzippy6160@gmail.com", password: "100", age: "23" },
-      //   { id: "789", lastNamename: "bob", firstName: "déjeuner", email: "tzippy6160@gmail.com", password: "100", age: "23" },
-      //   { id: "101", lastNamename: "tom", firstName: "dégagé", email: "tzippy6160@gmail.com", password: "100", age: "23" },
-      //   { id: "102", lastNamename: "tim", firstName: "décor", email: "tzippy6160@gmail.com", password: "100", age: "23" }
-      // ],
+      isOpen: false, 
+      errorEmail:"",
       options: [
-        'female', 'male'
+        {
+          value:eSex.Male.id,
+          label:eSex.Male.value},
+          {
+            value:eSex.Female.id,
+            label:eSex.Female.value}
       ],
-      users: [
-        
-      ]
+      contentPopup:''
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleChangeDate = this.handleChangeDate.bind(this);
   }
+  //react lifecycle 
+  componentWillMount() {
+    this.props.getAllUsers();
 
-   componentDidMount() {
-     this.timerID = setInterval(
-       () => this.tick(),
-       1000
-     );
-   }
-
-   componentWillUnmount() {
-     clearInterval(this.timerID);
-   }
-
-   tick() {
-     console.log("tick 3");
-     this.setState({
-       date: new Date()
-     });
-   }
-
+  }
+  componentDidMount() {
+    this.timerID = setInterval(
+      () => this.tick(),
+      1000
+    );
+  }
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+  componentWillReceiveProps(nextProps) {
+    // if (nextProps.length > this.props.length) {
+    //   this.openPopup();
+    // }
+    this.setState({errorEmail:""})
+    console.log("componentWillReceiveProps",this.props.showSuccessPopup)
+    if(this.props.showSuccessPopup!=null)
+    {
+      if(this.props.showSuccessPopup==true)
+      {
+        debugger;
+        this.setContextPopup(true);
+      }
+    
+    if(this.props.showSuccessPopup==false)
+    {
+      debugger;
+      this.closePopup();
+    }
+  }
+  }
+  //functions
+  tick() {
+    this.setState({ date: new Date() });
+  }
   handleChange = (selectedOption) => {
     this.setState({ selectedOption });
     if (selectedOption) {
-      console.log(`Selected: ${selectedOption.label}`);
+      // console.log(`Selected: ${selectedOption.label}`);
     }
   }
   handleChangeDate(date) {
-    this.setState({
-      startDate: date
-    });
+    this.setState({ startDate: date });
   }
-  //////////////////////////////////////////////validation
-  validateEmail = (email) => {
-    debugger;
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      return re.test(email);
-  };
-  validateFirstName = (firstName) => {
-    debugger;
-    var re =/^[a-zA-Z\s]*$/;  
-      return re.test(firstName);
-  };
-  validateLastName = (lastName) => {
-    debugger;
-    var re =/^[a-zA-Z\s]*$/;  
-      return re.test(lastName);
-  };
-  validateId = (id) => {
-    debugger;
-    //var re = /^(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T(?:[01]\d|2[0-3]):[0-5]\d:[0-5]\d(?:Z|[+-][01]\d:[0-5]\d)$/;
-    var re =/^([0-9]{9})$/;
-    return re.test(id);
-  };
-  validateAge = (age) => {
-    debugger;
-    var re =/^([0-9]{1,2})$/;
-      return re.test(age);
-  };
-  //------------------------------------------------------
+  signUp = (event) => {
+    this.onSubmit();
+    if (!_.find(this.props.data, { id:this.person.id })) {
+      this.props.savePerson(this.person);
+    }
+    else{
+      this.setContextPopup(false);
+    }
+  }
   onSubmit = () => {
-    debugger;
     if (!this.validateEmail(this.person.email)) {
-      alert("not a valid email");
-     console.log("// not a valid email");
- 
+
     } else {
-      console.log("// a valid email");
+      this.setState({errorEmail:"email not valid"})
     }
-    //
     if (!this.validateFirstName(this.person.firstName)) {
-      alert("not a valid firstName");
-      console.log("// not a valid first_name");
- 
-     } else {
-       console.log("// a valid first_name");
-     }
-     //
-     if (!this.validateLastName(this.person.lastName)) {
-      alert("not a valid lastName");
-      console.log("// not a valid last_name");
- 
-     } else {
-       console.log("// a valid last_name");
-     }
-     if (!this.validateId(this.person.id)) {
-      alert("not a valid id");
-      console.log("// not a valid id");
-     
-     } else {
-       console.log("// a valid id");
-     }
-     
-     if (!this.validateAge(this.person.age)) {
-      alert("not a valid age");
-      console.log("// not a valid age");
-     
-     } else {
-       console.log("// a valid age");
-     }
-    
-  }
-    //////////////////////////////////////////////validation
-  signUp=(event)=>{
-    // const newpeopleArray=_.forEach(this.state.peopleArray, (e) => {
-    //   debugger
-    // console.log(_.deburr(e.firstName));
-    // console.log(_.deburr(e.firstName,{firstName:this.state.firstName}));
-    // _.deburr(e.firstName,{firstName:this.state.firstName});
-    // });
 
-    //   console.log("newpeopleArray",newpeopleArray);
-    //   console.log("peopleArray",this.state.peopleArray);
-debugger
-  //   if (!_.find(this.props.data, { id: event.target.value })) {
-  //     debugger;
-  // this.props.savePerson(this.person);
-  //   }
-  //  while(this.onSubmit()!=5);
-  this.onSubmit();
-    if (!_.find(this.props.data, { id: this.person.id })) 
-    {
-      debugger;
-  this.props.savePerson(this.person);
+    } else {
+    }
+    if (!this.validateLastName(this.person.lastName)) {
+    } else {
+    }
+    if (!this.validateId(this.person.id)) {
+    } else {
+    }
+
+    if (!this.validateAge(this.person.age)) {
+    } else {
     }
   }
-
   openPopup = () => {
-    this.setState({
-      isOpen: true
-    });
+    debugger;
+   
+    this.setState({ isOpen: true });
   }
   closePopup = () => {
-    this.setState({
-      isOpen: false
-    });
+    this.setState({ isOpen: false });
+    this.props.closePopup();
   }
+  updatePersonProps = (event) => {
+    let personProperty = event.target.id;
+    this.person[personProperty] = event.target.value;
+  }
+  setContextPopup=(isTrue)=>{
+    debugger;
+if(isTrue==true)
+{
+this.setState({contentPopup:popupConfig.message.register.good});}
+else{
+this.setState({contentPopup:popupConfig.message.register.exist});
+  }
+  this.openPopup();
+}
 
-  addPerson = (event) => {
-    this.person[event.target.id] = event.target.value;
-  }
-
-  componentWillReceiveProps(nextProps) {
-    debugger
-    console.log("componentWillReceiveProps  ", nextProps.length === this.props.length)
-    if (nextProps.length > this.props.length) {
-      this.openPopup();
-    }
-  }
+  //////////////////////////////////////////////validation
+  validateEmail = (email) => {
+    var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return regex.test(email);
+  };
+  validateFirstName = (firstName) => {
+    var regex = /^[a-zA-Z\s]*$/;
+    return regex.test(firstName);
+  };
+  validateLastName = (lastName) => {
+    var regex = /^[a-zA-Z\s]*$/;
+    return regex.test(lastName);
+  };
+  validateId = (id) => {
+    var regex = /^([0-9]{9})$/;
+    return regex.test(id);
+  };
+  validateAge = (age) => {
+    var regex= /^([0-9]{1,2})$/;
+    return regex.test(age);
+  };
+  //////////////////////////////////////////////validation
 
   render() {
     const { selectedOption } = this.state;
     return (
-      // <div className="form-inline" style={{ margin: '5%'}}>
-        <div className="form-inline sign-in-form">
+      <div className="form-inline sign-in-form">
         <h2>Sign Up</h2>
         <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
         <div className="form-group">
           <DatePicker
+            todayButton={"today"}
             selected={this.state.startDate}
             onChange={this.handleChangeDate}
           />
@@ -242,105 +182,90 @@ debugger
             placeholder="id"
             required
             id="id"
-            onChange={(event) => this.addPerson(event)}
+            onChange={(event) => this.updatePersonProps(event)}
           />}
           <input
             className="form-control"
             type="text"
             placeholder="first-name"
             id="first-name"
-            onChange={(event) => this.addPerson(event)}
+            onChange={(event) => this.updatePersonProps(event)}
           />
           <input
             className="form-control"
             type="text"
             placeholder="last-name"
             id="last-name"
-            onChange={(event) => this.addPerson(event)}
+            onChange={(event) => this.updatePersonProps(event)}
           />
           <input
             className="form-control"
             type="text"
             placeholder="age"
             id="age"
-            onChange={(event) => this.addPerson(event)}
+            onChange={(event) => this.updatePersonProps(event)}
           />
           <Dropdown
-            className="form-control"
+            className="form-control sign-in-drop-down"
             options={this.state.options}
             placeholder="Select an option"
+            id="status"
             value={selectedOption}
             onChange={this.handleChange}
+            
           />
           <input
             className="form-control"
             type="text"
             placeholder="email"
             id="email"
-            onChange={(event) => this.addPerson(event)}
+            onChange={(event) => this.updatePersonProps(event)}
+            
           />
+          {this.state.errorEmail}
           <input
             className="form-control"
             type="password"
             style={{ marginRight: '5px' }}
             placeholder="password"
             id="password"
-            onChange={(event) => this.addPerson(event)}
+            onChange={(event) => this.updatePersonProps(event)}
           />
           <button
-            //className="btn btn-primary"
             className="c-button"
             type="button"
-            // onClick={() => this.signUp()}
             onClick={(event) => this.signUp(event)}
           >
             Sign Up
           </button>
-          {/* <button
-            //className="btn btn-primary"
-            className="c-button"
-            type="checkValid"
-            onClick={() => this.onSubmit()}
-          >
-            checkValid
-          </button> */}
-          {/* <button
-            onClick={(event) => this.signUp(event)}
-            className="btn btn-primary"
-            type="button"
-          >
-            Cancel
-          </button> */}
           <Link className="c-button" to="matcher">
             Cancel-matcher
          </Link>
-          <Popup show={this.props.showSuccessPopup}
+          <Popup show={this.state.isOpen}
             onClose={this.props.closePopup}>
-            <SubscriptionForm></SubscriptionForm>
+            {/* { <SubscriptionForm></SubscriptionForm> } */}
+            <button className="popup-close" onClick={()=>this.closePopup()}>x</button>
+            {this.state.contentPopup}
           </Popup>
         </div>
       </div>
     )
   }
 }
-
 const mapStateToProps = (state) => {
-  // people:this.state.people;
- debugger;
+  
+  console.log(state);
   return {
-
     data: state.register.data,
     showSuccessPopup: state.register.showSuccessPopup,
-    //peopleArray: state.register.peopleArray,
-    closePopup: state.register.showSuccessPopup
+   // closePopup: state.register.showSuccessPopup
   };
 }
 const mapDispatchToProps = (dispatch) => {
- debugger
   return {
-    getAllUsers: () =>{ debugger;dispatch(getAllUsers())},
-    savePerson: (person) => { debugger; dispatch(savePerson(person)) },
-    closePopup: () => { debugger; dispatch(closePopup()) }
+    getAllUsers: () => { dispatch(getAllUsers()) },
+    savePerson: (person) => { dispatch(savePerson(person)) },
+    closePopup: () => {debugger; dispatch(closePopup()) }
   };
 }
 export default connect(mapStateToProps, mapDispatchToProps)(SignUp)

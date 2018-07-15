@@ -9,7 +9,7 @@ class Popup extends React.Component {
     return (
       <div className="popup-backdrop">
         <div className="popup">
-          <button className="popup-close" onClick={this.props.onClose}>x</button>
+       
           {this.props.children}
         </div>
       </div>
