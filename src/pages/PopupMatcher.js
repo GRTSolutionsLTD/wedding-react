@@ -9,8 +9,6 @@ class PopupMatcher extends React.Component {
     return (
       <div className="popup-backdrop">
         <div className="popup">
-         
-          
           {this.props.children}
         </div>
       </div>

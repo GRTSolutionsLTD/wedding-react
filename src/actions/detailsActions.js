@@ -1,43 +1,64 @@
-import detailsApi from '../services/detailsApi'
-import { AxiosProvider, Request, Get, Delete, Head, Post, Put, Patch, withAxios } from 'react-axios'
+
 import axios from 'axios';
 
-export const showDetails = response => ({
-  type: 'DETAILS_SHOW_DETAILS',
-  response
-})
 
-export const loadDetails = () => ({
-  type: 'DETAILS_SHOW_LOADING'
-})
+
+import * as url from '../../src/urls.json';
 
 export const filterDetails = (searchType) => {
-  return{
-    type: 'DETAILS_FILTER',
-    search:searchType
-  }
-}
- 
-  export const getAllDetails = () => (
-    dispatch => {
-      debugger
-        return axios.get('http://localhost:3004/data/')
-            .then(res => {
-                dispatch({
-                    type: 'GET_ALL_DELAILS',
-                    data: res
-                })
-            })
-            .catch(err => {
-                console.log("error");
-            }
-            )
-    })
-    export const sortDates=(mode)=>{
-      return{
-        type:'SORT_DATES',
-        orderBy:mode
-      }
-    }
 
- 
+return {
+
+type: 'DETAILS_FILTER',
+
+search: searchType
+
+}
+
+}
+
+
+
+export const getAllDetails = () => (
+
+dispatch => {
+
+return axios.get(url.baseUrl+url.actions.getUsers)
+
+.then(res => {
+
+dispatch({
+
+type: 'GET_ALL_DELAILS',
+
+data: res
+
+})
+
+})
+
+.catch(err => {
+
+console.log("error");
+
+}
+
+)
+
+})
+
+
+
+export const sortDetailsByDates = (DescendingOrAscending) => {
+
+return {
+
+type: 'SORT_DATES',
+
+orderBy: DescendingOrAscending
+
+}
+
+}
+
+

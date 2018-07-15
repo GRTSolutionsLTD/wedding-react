@@ -329,7 +329,7 @@
       "lastName": "Trevino",
       "age": 73,
       "sex": 0,
-      "status": 0,
+      "status": 1,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a4ad9422712a701f5"
     },
@@ -499,7 +499,7 @@
       "lastName": "Rocha",
       "age": 26,
       "sex": 1,
-      "status": 0,
+      "status": 1,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "partnerID": "5b2b846a9cf6e7d8a385d2ed"
     },
