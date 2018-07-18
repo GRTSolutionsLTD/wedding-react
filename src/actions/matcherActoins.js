@@ -1,15 +1,15 @@
 import * as axios from 'axios';
 import * as url from '../../src/urls.json'
-export const getMales = () => {
-    return {
-        type: 'GET_MALES',
-    }
-}
-export const getFemales = () => {
-    return {
-        type: 'GET_FEMALES',
-    }
-}
+// export const getMales = () => {
+//     return {
+//         type: 'GET_MALES',
+//     }
+// }
+// export const getFemales = () => {
+//     return {
+//         type: 'GET_FEMALES',
+//     }
+// }
 export const getAllUsers = () => (
     dispatch => {
         return axios.get(url.baseUrl + url.actions.getUsers)

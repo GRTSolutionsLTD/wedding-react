@@ -19,7 +19,7 @@ export class Matcher extends React.Component {
             isOpenPopap: false,
             users: [],
             men: [],
-            wemen: [],
+            women: [],
             matcher: {
                 manIndex: -1,
                 womanIndex: -1
@@ -43,6 +43,9 @@ export class Matcher extends React.Component {
     }
     componentWillMount() {
         this.props.getAllUsers();
+        debugger
+        this.setState({men:this.props.men})
+        this.setState({women:this.props.women})
     }
     ///functions
     handleChangeMale = (e) => {
@@ -99,8 +102,14 @@ export class Matcher extends React.Component {
         return this.state.matcher.manIndex != -1 && this.state.matcher.womanIndex != -1;
     }
     setMatcherData = () => {
-        this.props.getMales();
-        this.props.getFemales();
+        console.log(this.props)
+        console.log(this.props.men)
+        debugger;
+        
+       
+
+        //this.props.getMales();
+       // this.props.getFemales();
         let matcher = {
             manIndex: -1,
             womanIndex: -1
@@ -140,10 +149,13 @@ export class Matcher extends React.Component {
 }
 //map props and states
 const mapStateToProps = (state) => {
+    debugger;
     return {
         data: state.matcher.data,
-        men: state.matcher.men,
-        women: state.matcher.women,
+        // men: state.matcher.men,
+        // women: state.matcher.women,
+        men: state.register.men,
+        women: state.register.women,
         isWomanPaylodSucceeded: state.matcher.isWomanPaylodSucceeded,
         isManPaylodSucceeded: state.matcher.isManPaylodSucceeded,
     };
@@ -152,8 +164,8 @@ const mapDispatchToProps = (dispatch) => {
     return {
         getAllUsers: () => dispatch(getAllUsers()),
         updateMatcher: (man, woman) => { dispatch(updateMatcher(man, woman)) },
-       getMales: () => dispatch(getMales()),
-        getFemales: () => dispatch(getFemales())
+    //    getMales: () => dispatch(getMales()),
+    //     getFemales: () => dispatch(getFemales())
     }
 };
 export default connect(mapStateToProps, mapDispatchToProps)(Matcher)

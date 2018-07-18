@@ -17,7 +17,7 @@
       "lastName": "Gvirtz",
       "age": 107,
       "sex": 1,
-      "status": 1,
+      "status": 0,
       "date": "Thu Apr 10 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "community": "Hasidim",
       "partnerID": "5b2b846ad0c4bc3fabd7dbff"
@@ -27,8 +27,8 @@
       "firstName": "Almoni",
       "lastName": "Genoot",
       "age": 114,
-      "sex": 0,
-      "status": 1,
+      "sex": 1,
+      "status": 0,
       "date": "Thu Jun 28 1995 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "community": "Hasidim",
       "partnerID": "5b2b846a577c3c0d4717df5e"
@@ -49,7 +49,7 @@
       "firstName": "Dawn",
       "lastName": "Cherie",
       "age": 30,
-      "sex": 0,
+      "sex": 1,
       "status": 0,
       "date": "Thu Jun 21 1995 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "community": "Hasidim",
@@ -60,7 +60,7 @@
       "firstName": "Velma",
       "lastName": "Dina",
       "age": 16,
-      "sex": 0,
+      "sex": 1,
       "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "community": "Hasidim",
@@ -350,7 +350,7 @@
       "lastName": "Melody",
       "age": 107,
       "sex": 0,
-      "status": 1,
+      "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "community": "Spanish",
       "partnerID": "5b2b846ace223a9d02b1dbfa"
@@ -405,7 +405,7 @@
       "lastName": "Lauri",
       "age": 73,
       "sex": 1,
-      "status": 1,
+      "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "community": "Spanish",
       "partnerID": "5b2b846a9fc985efa4d6d212"
@@ -438,7 +438,7 @@
       "lastName": "Trevino",
       "age": 73,
       "sex": 0,
-      "status": 1,
+      "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "community": "lightfish",
       "partnerID": "5b2b846a4ad9422712a701f5"
@@ -548,7 +548,7 @@
       "lastName": "Mavis",
       "age": 81,
       "sex": 0,
-      "status": 1,
+      "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "community": "A Yemenite",
       "partnerID": "5b2b846a081f153d5b3384a8"
@@ -636,7 +636,7 @@
       "lastName": "Rocha",
       "age": 26,
       "sex": 1,
-      "status": 1,
+      "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "community": "A Yemenite",
       "partnerID": "5b2b846a9cf6e7d8a385d2ed"
@@ -658,7 +658,7 @@
       "lastName": "Aida",
       "age": 0,
       "sex": 1,
-      "status": 1,
+      "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "community": "A Yemenite",
       "partnerID": "5b2b846a4447d048321db9d3"
@@ -702,7 +702,7 @@
       "lastName": "Lauren",
       "age": 79,
       "sex": 0,
-      "status": 1,
+      "status": 0,
       "date": "Thu Jun 21 2018 13:56:42 GMT+0300 (שעון ישראל (קיץ))",
       "community": "A Yemenite",
       "partnerID": "5b2b846a9db6dc0aa07d3d92"

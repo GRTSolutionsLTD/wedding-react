@@ -24,8 +24,8 @@ export class MatcherPage extends React.Component {
     fillArray = () => { 
       this.state.users= _.sortBy(this.state.users, ["firstName","lastName"]);
        console.log(this.state.users.map(p=>p.firstName))
-        const male = _.filter(this.state.users, p => p.sex == 1 && p.status == 0);
-        const female = _.filter(this.state.users, p => p.sex == 0 && p.status == 0);
+       // const male = _.filter(this.state.users, p => p.sex == 1 && p.status == 0);
+//const female = _.filter(this.state.users, p => p.sex == 0 && p.status == 0);
         this.setState({ indexMale: -1, indexFemale: -1, male, female }, () => {  });
        
     }

@@ -6,10 +6,25 @@ export const showRegister = response => ({
   type: 'REGISTER_SHOW_REGISTER',
   response
 })
-
-export const loadRegister = () => ({
-  type: 'REGISTER_SHOW_LOADING'
-})
+export const getMales = (multy) => {
+    return {
+        type: 'GET_MALES',
+        multy:multy
+    }
+}
+export const getFemales = (multy) => {
+    return {
+        type: 'GET_FEMALES',
+        multy:multy
+    }
+}
+export const getDitailsByMulty = (multy) =>{
+    return {
+        type: 'GET_DETAILS_BYMULT',
+        multy:multy
+        }
+ 
+}
 export const savePerson = (person) => (
   dispatch => {
   debugger
@@ -28,7 +43,7 @@ export const savePerson = (person) => (
 )
 export const getAllUsers = () => (
   dispatch => {
-    debugger
+ 
       return axios.get('http://localhost:3004/data/')
           .then(res => {
               dispatch({

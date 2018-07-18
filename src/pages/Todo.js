@@ -1,140 +1,122 @@
-// import React from 'react'
-// import { Helmet } from 'react-helmet'
-// import TodoFooter from '../components/TodoFooter'
-// import AddTodo from '../containers/AddTodo'
-// import VisibleTodoList from '../containers/VisibleTodoList'
 
-// const TodoPage = () => [
-//   <Helmet>
-//     <meta
-//       name="description"
-//       content="React Redux example demonstrates how to implement todo list!"
-//     />
-//   </Helmet>,
-//   <main className="p-todo">
-//     <h3 className="p-todo__title">Todo List</h3>
-//     <AddTodo />
-//     <VisibleTodoList />
-//     <TodoFooter />
-//   </main>
-// ]
-// export default TodoPage
+import React from 'react';
+import { eCommunity } from '../../src/constants/enums';
+import { exists } from 'fs';
+import { connect } from 'react-redux' 
+import { Link } from 'react-router'
+import { getDitailsByMulty,getAllUsers,getFemales,getMales } from '../actions/registerAction';
+import { browserHistory } from 'react-router'
 
-
-
-// class TodoPage  extends Component {
-  import React from 'react';
-import createClass from 'create-react-class';
-import PropTypes from 'prop-types';
-import Select from 'react-select';
-import {eCommunity} from '../../src/constants/enums';
-
-var TodoPage = createClass({
- 
-	displayName: 'ValuesAsNumbersField',
-	propTypes: {
-		label: PropTypes.string
-	},
-	getInitialState () {
-		return {
-      myName:"Tzippy"
-      ,class:4,
-      Community:[],
-			options: [
-				{ value: 10, label: 'Ten' },
-				{ value: 11, label: 'Eleven' },
-				{ value: 12, label: 'Twelve' },
-				{ value: 23, label: 'Twenty-three' },
-				{ value: 24, label: 'Twenty-four' }
-			],
-			matchPos: 'any',
-			matchValue: true,
-			matchLabel: true,
-			value: null,
-      multi: false
-  
-    };
-  
-	},
-	onChangeMatchStart(event) {
-		this.setState({
-			matchPos: event.target.checked ? 'start' : 'any'
-		});
-	},
-	onChangeMatchValue(event) {
-		this.setState({
-			matchValue: event.target.checked
-		});
-	},
-	onChangeMatchLabel(event) {
-		this.setState({
-			matchLabel: event.target.checked
-		});
-  },
- 
-	onChange(value) {
-		this.setState({ value });
-		console.log('Numeric Select value changed to', value);
-	},
-	onChangeMulti(event) {
-		this.setState({
-			multi: event.target.checked
-		});
-	},
-	render () {
-   
-    console.log(this.state)
-		var matchProp = 'any';
-		if (this.state.matchLabel && !this.state.matchValue) {
-			matchProp = 'label';
+import { BrowserRouter as Router } from 'react-router-dom'
+class TodoPage extends React.Component
+ {
+	constructor(props) {
+		super(props);
+		this.state = {
+			community:eCommunity,	
+			multi: []
 		}
-		if (!this.state.matchLabel && this.state.matchValue) {
-			matchProp = 'value';
-		}
-		return (
-			<div className="section">
-       <Select
-					matchPos={this.state.matchPos}
-					matchProp={matchProp}
-					multi={this.state.multi}
-					onChange={this.onChange}
-					options={this.state.Community}
-					simpleValue
-					value={this.state.value}
-					/>
-			<div>
-      {/* <div>
-        {this.state.Community
-          .map(t => <span>{t}</span>)
-          .reduce((prev, curr) => [prev, ', ', curr])}
-         
-     </div> */}
-      {/* <div>
-        {this.state.Community
-          .map(t => <span>{t.value}</span>)
-         }
-     </div> */}
-      
-      </div>
-				<div className="checkbox-list">
-					<label className="checkbox">
-						<input type="checkbox" className="checkbox-control" checked={this.state.multi} onChange={this.onChangeMulti} />
-						<span className="checkbox-label">Multi-Select</span>
-					</label>
-					<label className="checkbox">
-						<input type="checkbox" className="checkbox-control" checked={this.state.matchValue} onChange={this.onChangeMatchValue} />
-						<span className="checkbox-label">Match value</span>
-					</label>
-					<label className="checkbox">
-						<input type="checkbox" className="checkbox-control" checked={this.state.matchLabel} onChange={this.onChangeMatchLabel} />
-						<span className="checkbox-label">Match label</span>
-					</label>
-				
-				</div>
-		
-			</div>
-		);
+		this.router = undefined
 	}
-});
+	componentWillReceiveProps(nextProps) {
+        // on page load || update users list
+        if (this.props.users !== nextProps.users) {
 
-export default TodoPage
+        }
+     
+    }
+onChangeMulti=(event)=> {
+let isExist=this.state.multi.find(p=>p==event.target.value);
+
+if(isExist!=undefined)
+{
+
+	let index=this.state.multi.findIndex(p=>p==isExist);
+	this.state.multi.splice(index,1);
+	
+}	
+else{	
+	let multi=[...this.state.multi]
+	multi.push(event.target.value);
+	this.setState({
+		multi
+	});
+}
+
+console.log(this.state.multi)
+}
+
+  
+componentWillMount() {
+	this.props.getAllUsers();
+	}
+search=()=>
+{
+
+	if(!this.state.multi.length)
+	{
+		this.setState({multi:eCommunity})
+		debugger;
+		alert("You didnt choose anything");
+	}
+	
+//this.props.getDitailsByMulty(this.state.multi);
+this.props.getMales(this.state.multi);
+this.props.getFemales(this.state.multi)
+
+///browserHistory.push('../../src/containers/Matcher')
+//this.router.history.push("../../src/containers/Matcher")
+//	alert("search:  " +this.state.multi);
+}
+
+render() {
+	return (		
+			<div className="checkbox-list">
+				<label className="checkbox">
+					<input type="checkbox" value={this.state.community.Moroccan.value} className="checkbox-control" onChange={this.onChangeMulti} />
+					<span className="checkbox-label">{this.state.community.Moroccan.value}</span>
+				</label>
+				<label className="checkbox">
+					<input type="checkbox" className="checkbox-control" value={this.state.community.Hasidim.value} onChange={this.onChangeMulti} />
+					<span className="checkbox-label">{this.state.community.Hasidim.value}</span>
+				</label>
+				<label className="checkbox">
+					<input type="checkbox" className="checkbox-control" value={this.state.community.AYemenite.value}  onChange={this.onChangeMulti} />
+					<span className="checkbox-label">{this.state.community.AYemenite.value}</span>
+				</label>
+				<label className="checkbox">
+					<input type="checkbox" className="checkbox-control" value={this.state.community.Spanish.value} onChange={this.onChangeMulti} />
+					<span className="checkbox-label"> {this.state.community.Spanish.value}</span>
+				</label>
+				<label className="checkbox">
+					<input type="checkbox" className="checkbox-control" value={this.state.community.lightfish.value} onChange={this.onChangeMulti} />
+					<span className="checkbox-label">{this.state.community.lightfish.value}</span>
+				</label>
+				{/* <button onClick={()=>this.search()}>search</button><br/> */}
+				
+				 <Link className="c-button" to="matcher" onClick={()=>this.search()}>
+Search
+</Link> 
+			</div>
+	);
+}}
+
+const mapStateToProps = (state) => {
+
+	return {
+		users: state.register.users,
+		men: state.register.men,
+        women: state.register.women,
+	};
+	}
+	const mapDispatchToProps = (dispatch) => {
+	
+	return {
+		getDitailsByMulty: (multy) => { dispatch(getDitailsByMulty(multy)) },
+		getAllUsers:()=>{dispatch(getAllUsers())},
+		getMales: (multy) => dispatch(getMales(multy)),
+        getFemales: (multy) => dispatch(getFemales(multy))
+	};
+	}
+	export default connect(mapStateToProps, mapDispatchToProps)(TodoPage)
+

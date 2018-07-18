@@ -21,6 +21,8 @@ const DetailsReducer = (state = initialState, action) => {
         ...state,
         displayData: sortUsersByDates([...displayData], action.orderBy)
       }
+
+
     default:
       return Object.assign({}, state, initialState)
   }

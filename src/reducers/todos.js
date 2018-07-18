@@ -1,5 +1,5 @@
 import data from '../actions/TodoList.json';
-
+import _ from 'lodash'
 const todo = (state = {}, action) => {
   switch (action.type) {
     case 'ADD_TODO':
