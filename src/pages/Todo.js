@@ -82,8 +82,7 @@ var TodoPage = createClass({
 		});
 	},
 	render () {
-    this.setState({Community:eCommunity})
-    console.log("=============",this.state.Community)
+   
     console.log(this.state)
 		var matchProp = 'any';
 		if (this.state.matchLabel && !this.state.matchValue) {
