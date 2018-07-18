@@ -8,7 +8,24 @@ export const eStatus = {
         value: 'Married'
     }
 };
+export const eCommunity={
+    Moroccan:{
+        id:0,
+       value: 'Moroccan'},
+    Hasidim:{
+        id:1,
+        value:'Hasidim'},
+    lightfish:{
+        id:2,
+        value:'lightfish'},
+    AYemenite:{
+        id:3,
+        value:'A Yemenite'},
 
+    Spanish:{
+        id:4,
+        value:'Spanish'}
+}
 export const eSortDirection = {
     Ascending: {
         id: 0,
